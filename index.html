@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tibetan Youth Initiative</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#8B0000',
+            accent: '#FEEBCB',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Header -->
+  <header class="bg-primary text-white py-6 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center md:justify-start text-center md:text-left gap-4">
+      <img src="logo.png" alt="TYI Logo" class="w-16 h-16 object-contain"/>
+      <div>
+        <h1 class="text-4xl font-extrabold">Tibetan Youth Initiative</h1>
+        <p class="mt-1 text-lg">Empowering Tibetan youth through education, culture, and action</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-center space-x-8 text-primary font-semibold">
+      <a href="#about" class="hover:underline">About</a>
+      <a href="#mission" class="hover:underline">Mission</a>
+      <a href="#impact" class="hover:underline">Impact</a>
+      <a href="#schools" class="hover:underline">Schools</a>
+      <a href="#contact" class="hover:underline">Contact</a>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-accent">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-primary mb-4">About Us</h2>
+      <p class="text-lg leading-relaxed">
+        Tibetan Youth Initiative (TYI) is a youth-led nonprofit driven by the passion to uplift Tibetan communities through direct action, education, and cultural preservation. Founded by high school students, TYI blends modern advocacy with deep-rooted heritage, empowering a new generation of Tibetan leaders.
+      </p>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section id="mission" class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-primary mb-6 text-center">Our Mission</h2>
+      <ul class="grid md:grid-cols-2 gap-6 text-lg leading-relaxed">
+        <li class="bg-accent p-6 rounded-xl shadow">
+          <strong class="block mb-2 text-primary">🎓 Educational Empowerment</strong>
+          Support refugee schools and provide vital learning materials for Tibetan students.
+        </li>
+        <li class="bg-accent p-6 rounded-xl shadow">
+          <strong class="block mb-2 text-primary">📣 Global Advocacy</strong>
+          Raise awareness for Tibetan youth issues through media, events, and campaigns.
+        </li>
+        <li class="bg-accent p-6 rounded-xl shadow">
+          <strong class="block mb-2 text-primary">🧠 Cultural Workshops</strong>
+          Host community sessions on identity, heritage, and Tibetan language revival.
+        </li>
+        <li class="bg-accent p-6 rounded-xl shadow">
+          <strong class="block mb-2 text-primary">🤝 Youth Leadership</strong>
+          Empower young Tibetans to lead change in their communities and beyond.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Impact Section -->
+  <section id="impact" class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-primary mb-4">Our Impact</h2>
+      <p class="text-lg leading-relaxed mb-6">
+        Thanks to our amazing supporters, we’ve raised over <span class="font-bold text-primary">$3,000</span> to help Tibetan students access vital school supplies, technology, and cultural programs. Every dollar goes directly to making a difference in the lives of young Tibetans in India.
+      </p>
+      <a href="https://venmo.com/nyida-gyal" target="_blank" class="inline-block bg-primary text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-red-800 transition">
+        Donate via Venmo @Nyida-Gyal
+      </a>
+      <p class="mt-3 text-sm text-gray-600">or search <strong>Nyida Gyal</strong> on Venmo (703-472-5236)</p>
+    </div>
+  </section>
+
+  <!-- Schools Section -->
+  <section id="schools" class="py-16 bg-accent">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-primary text-center mb-6">Schools We Support</h2>
+      <p class="text-lg text-center mb-8">
+        TYI fundraises to support these amazing institutions serving Tibetan refugee students:
+      </p>
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h3 class="text-xl font-semibold text-primary">Tibetan Children's Village (TCV)</h3>
+          <p class="mt-2">970 students from pre-primary to Grade 12</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h3 class="text-xl font-semibold text-primary">Mebon Peton School</h3>
+          <p class="mt-2">538 students, Grades pre-primary to 10</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h3 class="text-xl font-semibold text-primary">Dhasa Yongling Pre-primary School</h3>
+          <p class="mt-2">75 students in early childhood programs</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h3 class="text-xl font-semibold text-primary">Acnestral Heritage Model School</h3>
+          <p class="mt-2">Focused on cultural education and Tibetan identity</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-primary mb-4">Contact Us</h2>
+      <p class="text-lg mb-6">Want to support our work, collaborate, or volunteer? Reach out anytime.</p>
+      <p class="text-lg">
+        📧 Email: <a href="mailto:nyidagyal17@gmail.com" class="text-primary underline">nyidagyal17@gmail.com</a><br />
+        📸 Instagram: <a href="https://instagram.com/nyidagyal" target="_blank" class="text-primary underline">@nyidagyal</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center py-6">
+    2025 Tibetan Youth Initiative
+  </footer>
+
+</body>
+</html>
