@@ -3,145 +3,789 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tibetan Youth Initiative</title>
+  <title>TibetanYouthInitiative - Empowering Through Education</title>
+  
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
             primary: '#8B0000',
+            'primary-dark': '#6e0000',
+            'primary-light': '#a31515',
             accent: '#FEEBCB',
+            'accent-dark': '#f4d19b',
+            light: '#FDF7F0',
+            gold: '#FFD700',
+            'gold-dark': '#DAA520',
           },
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
-          }
+            serif: ['Playfair Display', 'serif'],
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.8s ease-in-out',
+            'slide-up': 'slideUp 0.8s ease-out',
+            'bounce-slow': 'bounce 3s infinite',
+            'pulse-slow': 'pulse 3s infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'shine': 'shine 1.5s infinite',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(30px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+            shine: {
+              '0%': { backgroundPosition: '200% 0' },
+              '100%': { backgroundPosition: '-200% 0' },
+            },
+          },
         }
       }
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
   <style>
-    html { scroll-behavior: smooth; }
+    html { 
+      scroll-behavior: smooth; 
+    }
+    
+    .scrolled {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(139, 0, 0, 0.1);
+    }
+    
+    .scrolled a {
+      color: #8B0000 !important;
+    }
+    
+    .scrolled .logo-text, .scrolled #mobile-menu-button {
+      color: #8B0000 !important;
+    }
+    
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, rgba(139, 0, 0, 0.9), rgba(218, 165, 32, 0.7));
+    }
+    
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(139, 0, 0, 0.15);
+    }
+    
+    .parallax {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    .typing-animation {
+      overflow: hidden;
+      border-right: 3px solid #8B0000;
+      animation: typing 3s steps(40, end), blink-caret 1s step-end infinite;
+    }
+    
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #8B0000 }
+    }
+    
+    .progress-bar {
+      height: 4px;
+      background: #8B0000;
+      border-radius: 2px;
+      animation: progress 2s ease-in-out;
+    }
+    
+    @keyframes progress {
+      from { width: 0 }
+    }
+    
+    .floating-icon {
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    .scale-hover:hover {
+      transform: scale(1.05);
+    }
+    
+    .magnetic-button {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .magnetic-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transition: left 0.5s;
+    }
+    
+    .magnetic-button:hover::before {
+      left: 100%;
+    }
+
+    .donate-button {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(90deg, #FFD700, #DAA520);
+      background-size: 200% auto;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .donate-button:hover {
+      background-position: right center;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .donate-button:active {
+      transform: translateY(1px);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .donate-button i {
+      transition: transform 0.3s ease;
+    }
+
+    .donate-button:hover i {
+      transform: scale(1.2);
+    }
+
+    .donate-button span {
+      position: relative;
+      z-index: 1;
+    }
   </style>
 </head>
-<body class="bg-white text-gray-800 font-sans">
 
-  <!-- Header -->
-  <header class="bg-primary text-white py-6 shadow-md">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center md:justify-start text-center md:text-left gap-4">
-      <img src="logo.png" alt="TYI Logo" class="w-16 h-16 object-contain"/>
-      <div>
-        <h1 class="text-4xl font-extrabold">Tibetan Youth Initiative</h1>
-        <p class="mt-1 text-lg">Empowering Tibetan youth through education, culture, and action</p>
+<body class="bg-light text-gray-800 font-sans" style="background-image: url('background.png'); background-size: cover; background-attachment: fixed;">
+
+  <!-- Progress Bar -->
+  <div id="progress-bar" class="fixed top-0 left-0 z-50 h-1 bg-primary transition-all duration-300"></div>
+
+  <!-- Header & Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-40 transition-all duration-300">
+    <nav id="navbar" class="text-white py-4">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between">
+          
+          <!-- Logo -->
+          <a href="#hero" class="flex items-center flex-shrink-0">
+            <div class="h-12 w-12 rounded-full flex items-center justify-center overflow-hidden">
+              <img src="logo.png" alt="TibetanYouthInitiative Logo" class="w-full h-full object-cover">
+            </div>
+            <span id="logo-text" class="font-bold text-xl tracking-tight logo-text">
+              Tibetan Youth Initiative
+            </span>
+          </a>
+          
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center space-x-8 font-semibold">
+            <a href="#about" class="relative hover:text-accent transition-colors duration-300 group">
+              About
+              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#impact" class="relative hover:text-accent transition-colors duration-300 group">
+              Impact
+              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#schools" class="relative hover:text-accent transition-colors duration-300 group">
+              Schools
+              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#gallery" class="relative hover:text-accent transition-colors duration-300 group">
+              Gallery
+              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#donors" class="relative hover:text-accent transition-colors duration-300 group">
+              Donors
+              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#donate" class="bg-gold hover:bg-gold-dark text-primary font-bold py-2 px-6 rounded-full transition-all duration-300 magnetic-button">
+              Donate Now
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden flex items-center">
+            <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md hover:bg-primary-dark focus:outline-none transition-colors duration-300">
+              <i class="fas fa-bars fa-lg"></i>
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
+      
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden glass-effect">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a href="#about" class="block py-3 px-4 text-sm hover:bg-primary-dark rounded-md transition-colors duration-300">About</a>
+          <a href="#impact" class="block py-3 px-4 text-sm hover:bg-primary-dark rounded-md transition-colors duration-300">Impact</a>
+          <a href="#schools" class="block py-3 px-4 text-sm hover:bg-primary-dark rounded-md transition-colors duration-300">Schools</a>
+          <a href="#gallery" class="block py-3 px-4 text-sm hover:bg-primary-dark rounded-md transition-colors duration-300">Gallery</a>
+          <a href="#donors" class="block py-3 px-4 text-sm hover:bg-primary-dark rounded-md transition-colors duration-300">Donors</a>
+          <a href="#donate" class="block py-3 px-4 text-sm font-bold bg-gold text-primary rounded-md hover:bg-gold-dark transition-colors duration-300">Donate Now</a>
+        </div>
+      </div>
+    </nav>
   </header>
 
-  <!-- Navigation -->
-  <nav class="bg-white shadow sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-center space-x-8 text-primary font-semibold">
-      <a href="#about" class="hover:underline">About</a>
-      <a href="#mission" class="hover:underline">Mission</a>
-      <a href="#impact" class="hover:underline">Impact</a>
-      <a href="#schools" class="hover:underline">Schools</a>
-      <a href="#contact" class="hover:underline">Contact</a>
+  <!-- Hero Section -->
+  <section id="hero" class="h-screen bg-cover bg-center flex items-center justify-center text-white relative parallax" 
+           style="background-image: url('background.png');">
+    <div class="absolute inset-0 hero-gradient"></div>
+    
+    <!-- Floating Elements -->
+    <div class="absolute top-1/4 left-1/4 opacity-20">
+      <div class="floating-icon text-4xl text-gold">
+        <i class="fas fa-book-open"></i>
+      </div>
     </div>
-  </nav>
-
-  <!-- About Section -->
-  <section id="about" class="py-16 bg-accent">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold text-primary mb-4">About Us</h2>
-      <p class="text-lg leading-relaxed">
-        Tibetan Youth Initiative (TYI) is a youth-led nonprofit driven by the passion to uplift Tibetan communities through direct action, education, and cultural preservation. Founded by high school students, TYI blends modern advocacy with deep-rooted heritage, empowering a new generation of Tibetan leaders.
-      </p>
+    <div class="absolute top-1/3 right-1/4 opacity-20">
+      <div class="floating-icon text-3xl text-accent" style="animation-delay: 1s;">
+        <i class="fas fa-pencil-alt"></i>
+      </div>
     </div>
-  </section>
-
-  <!-- Mission Section -->
-  <section id="mission" class="py-16 bg-white">
-    <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-primary mb-6 text-center">Our Mission</h2>
-      <ul class="grid md:grid-cols-2 gap-6 text-lg leading-relaxed">
-        <li class="bg-accent p-6 rounded-xl shadow">
-          <strong class="block mb-2 text-primary">🎓 Educational Empowerment</strong>
-          Support refugee schools and provide vital learning materials for Tibetan students.
-        </li>
-        <li class="bg-accent p-6 rounded-xl shadow">
-          <strong class="block mb-2 text-primary">📣 Global Advocacy</strong>
-          Raise awareness for Tibetan youth issues through media, events, and campaigns.
-        </li>
-        <li class="bg-accent p-6 rounded-xl shadow">
-          <strong class="block mb-2 text-primary">🧠 Cultural Workshops</strong>
-          Host community sessions on identity, heritage, and Tibetan language revival.
-        </li>
-        <li class="bg-accent p-6 rounded-xl shadow">
-          <strong class="block mb-2 text-primary">🤝 Youth Leadership</strong>
-          Empower young Tibetans to lead change in their communities and beyond.
-        </li>
-      </ul>
+    <div class="absolute bottom-1/4 left-1/3 opacity-20">
+      <div class="floating-icon text-5xl text-gold" style="animation-delay: 2s;">
+        <i class="fas fa-heart"></i>
+      </div>
     </div>
-  </section>
-
-  <!-- Impact Section -->
-  <section id="impact" class="py-16 bg-white">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold text-primary mb-4">Our Impact</h2>
-      <p class="text-lg leading-relaxed mb-6">
-        Thanks to our amazing supporters, we’ve raised over <span class="font-bold text-primary">$3,000</span> to help Tibetan students access vital school supplies, technology, and cultural programs. Every dollar goes directly to making a difference in the lives of young Tibetans in India.
-      </p>
-      <a href="https://venmo.com/nyida-gyal" target="_blank" class="inline-block bg-primary text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-red-800 transition">
-        Donate via Venmo @Nyida-Gyal
-      </a>
-      <p class="mt-3 text-sm text-gray-600">or search <strong>Nyida Gyal</strong> on Venmo (703-472-5236)</p>
+    
+    <div class="text-center z-10 px-4 max-w-5xl mx-auto">
+      <div class="animate-slide-up">
+        <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight font-serif">
+          Empowering 
+          <span class="text-gold">Tibetan Youth</span> 
+          for Change
+        </h1>
+      </div>
+      <div class="animate-slide-up" style="animation-delay: 0.3s;">
+        <p class="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200 font-medium">
+          A youth-led initiative empowering Tibetan youth to drive impact through education, cultural preservation, and community development worldwide.
+        </p>
+      </div>
+      <div class="animate-slide-up flex flex-col sm:flex-row gap-4 justify-center" style="animation-delay: 0.6s;">
+        <a href="#donate" class="bg-gold hover:bg-gold-dark text-primary font-bold py-4 px-10 rounded-full text-lg transition-all duration-300 donate-button">
+          <i class="fas fa-heart mr-2"></i>
+          Support Our Mission
+        </a>
+        <a href="#about" class="glass-effect hover:bg-white hover:text-primary font-bold py-4 px-10 rounded-full text-lg transition-all duration-300 scale-hover">
+          <i class="fas fa-arrow-down mr-2"></i>
+          Learn More
+        </a>
+      </div>
     </div>
-  </section>
-
-  <!-- Schools Section -->
-  <section id="schools" class="py-16 bg-accent">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-primary text-center mb-6">Schools We Support</h2>
-      <p class="text-lg text-center mb-8">
-        TYI fundraises to support these amazing institutions serving Tibetan refugee students:
-      </p>
-      <div class="grid gap-6 md:grid-cols-2">
-        <div class="bg-white p-6 rounded-xl shadow">
-          <h3 class="text-xl font-semibold text-primary">Tibetan Children's Village (TCV)</h3>
-          <p class="mt-2">970 students from pre-primary to Grade 12</p>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow">
-          <h3 class="text-xl font-semibold text-primary">Mebon Peton School</h3>
-          <p class="mt-2">538 students, Grades pre-primary to 10</p>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow">
-          <h3 class="text-xl font-semibold text-primary">Dhasa Yongling Pre-primary School</h3>
-          <p class="mt-2">75 students in early childhood programs</p>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow">
-          <h3 class="text-xl font-semibold text-primary">Acnestral Heritage Model School</h3>
-          <p class="mt-2">Focused on cultural education and Tibetan identity</p>
-        </div>
+    
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+        <div class="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-16 bg-white">
-    <div class="max-w-3xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold text-primary mb-4">Contact Us</h2>
-      <p class="text-lg mb-6">Want to support our work, collaborate, or volunteer? Reach out anytime.</p>
-      <p class="text-lg">
-        📧 Email: <a href="mailto:nyidagyal17@gmail.com" class="text-primary underline">nyidagyal17@gmail.com</a><br />
-        📸 Instagram: <a href="https://instagram.com/nyidagyal" target="_blank" class="text-primary underline">@nyidagyal</a>
-      </p>
-    </div>
-  </section>
+  <main>
+    <!-- About & Founder Section -->
+    <section id="about" class="py-24 md:py-32 bg-white/95 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-5">
+        <div class="absolute top-0 left-0 w-full h-full bg-repeat" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><pattern id=%22grain%22 width=%22100%22 height=%22100%22 patternUnits=%22userSpaceOnUse%22><circle cx=%2250%22 cy=%2250%22 r=%221%22 fill=%22%23000%22/></pattern></defs><rect width=%22100%22 height=%22100%22 fill=%22url(%23grain)%22/></svg>')"></div>
+      </div>
+      
+      <div class="max-w-6xl mx-auto px-6 space-y-16 relative">
+        <div class="text-center animate-fade-in">
+          <h2 class="text-4xl md:text-5xl font-black text-primary mb-8 font-serif">
+            Our Story
+          </h2>
+          <p class="text-xl md:text-2xl leading-relaxed text-gray-700 max-w-4xl mx-auto font-medium">
+            Tibetan Youth Initiative is a nonprofit led by high school students passionate about our heritage. We are dedicated to empowering Tibetan youth worldwide through education, cultural preservation, and community initiatives, fostering leadership and impact in diverse areas.
+          </p>
+        </div>
+        
+        <div class="bg-white p-10 md:p-16 rounded-3xl shadow-2xl animate-slide-up card-hover relative overflow-hidden">
+          <div class="space-y-6 text-center lg:text-left">
+            <div>
+              <h3 class="text-3xl md:text-4xl font-bold text-primary mb-2 font-serif">
+                A Message From Our Founder
+              </h3>
+              <p class="text-xl text-gold font-semibold">Nyida Gyal</p>
+            </div>
+            
+            <blockquote class="text-lg md:text-xl leading-relaxed text-gray-700 italic border-l-4 border-gold pl-6">
+              "Our team of high schoolers is passionate about making a change, and doing so through requires a sense of obligation. Significant change is not achieved all at once, but is accumulated through an abundance of time, people, and consistent efforts. For any high schoolers interested in becoming involved with the Tibetan Youth Intiative, feel free to email us at nyidagyal17@gmail.com, and be a part of making change from local communities to across the world."
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Statistics Section -->
+    <section id="impact" class="py-24 md:py-32 bg-accent/95 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle at 25% 25%, rgba(139, 0, 0, 0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(218, 165, 32, 0.1) 0%, transparent 50%)"></div>
+      </div>
+      
+      <div class="max-w-7xl mx-auto px-6 relative">
+        <div class="text-center mb-16 animate-fade-in">
+          <h2 class="text-4xl md:text-5xl font-black text-primary mb-6 font-serif">
+            Our Impact, By the Numbers
+          </h2>
+          <p class="text-xl md:text-2xl max-w-4xl mx-auto text-gray-700 font-medium">
+            Through the generosity of our community, we've made a tangible difference. Here is our progress to date, with every number representing a life touched and a future brightened.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+          <div class="bg-white p-10 rounded-3xl shadow-2xl card-hover relative overflow-hidden group">
+            <div class="absolute top-0 right-0 w-20 h-20 bg-primary opacity-10 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500"></div>
+            <div class="relative text-center">
+              <div class="text-primary text-6xl mb-4 floating-icon">
+                <i class="fas fa-child-reaching"></i>
+              </div>
+              <div class="text-5xl md:text-6xl font-black text-primary mb-2">1,500+</div>
+              <div class="text-xl font-bold text-gray-600 mb-4">Students Supported</div>
+              <div class="progress-bar" style="width: 95%"></div>
+              <p class="text-sm text-gray-500 mt-2">Across 3 schools in Dharamsala</p>
+            </div>
+          </div>
+          
+          <div class="bg-white p-10 rounded-3xl shadow-2xl card-hover relative overflow-hidden group">
+            <div class="absolute top-0 right-0 w-20 h-20 bg-primary opacity-10 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500"></div>
+            <div class="relative text-center">
+              <div class="text-primary text-6xl mb-4 floating-icon" style="animation-delay: 0.5s;">
+                <i class="fas fa-pencil-ruler"></i>
+              </div>
+              <div class="text-5xl md:text-6xl font-black text-primary mb-2">36,000+</div>
+              <div class="text-xl font-bold text-gray-600 mb-4">Supplies Distributed</div>
+              <div class="progress-bar" style="width: 88%"></div>
+              <p class="text-sm text-gray-500 mt-2">Essential learning materials</p>
+            </div>
+          </div>
+          
+          <div class="bg-white p-10 rounded-3xl shadow-2xl card-hover relative overflow-hidden group">
+            <div class="absolute top-0 right-0 w-20 h-20 bg-primary opacity-10 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500"></div>
+            <div class="relative text-center">
+              <div class="text-primary text-6xl mb-4 floating-icon" style="animation-delay: 1s;">
+                <i class="fas fa-hand-holding-dollar"></i>
+              </div>
+              <div class="text-5xl md:text-6xl font-black text-primary mb-2">$3,000+</div>
+              <div class="text-xl font-bold text-gray-600 mb-4">Raised & Deployed</div>
+              <div class="progress-bar" style="width: 75%"></div>
+              <p class="text-sm text-gray-500 mt-2">100% to direct programs</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-3xl shadow-2xl overflow-hidden animate-slide-up">
+          <div class="bg-primary p-8">
+            <h3 class="text-2xl md:text-3xl font-bold text-white text-center font-serif">
+              Detailed Supply Distribution
+            </h3>
+            <p class="text-accent text-center mt-2">Every item makes a difference</p>
+          </div>
+          
+          <div class="overflow-x-auto">
+            <table class="w-full">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-8 py-4 text-left font-bold text-primary">Item</th>
+                  <th class="px-8 py-4 text-center font-bold text-primary">Total Distributed</th>
+                  <th class="px-8 py-4 text-center font-bold text-primary">Impact</th>
+                </tr>
+              </thead>
+              <tbody class="text-gray-700">
+                <tr class="hover:bg-light transition-colors duration-200">
+                  <td class="px-8 py-4 font-medium">📓 Notebooks</td>
+                  <td class="px-8 py-4 text-center text-lg font-bold text-primary">1,583</td>
+                  <td class="px-8 py-4 text-center text-sm text-gray-500">Knowledge capture</td>
+                </tr>
+                <tr class="hover:bg-light transition-colors duration-200">
+                  <td class="px-8 py-4 font-medium">📏 Rulers</td>
+                  <td class="px-8 py-4 text-center text-lg font-bold text-primary">1,583</td>
+                  <td class="px-8 py-4 text-center text-sm text-gray-500">Precision learning</td>
+                </tr>
+                <tr class="hover:bg-light transition-colors duration-200">
+                  <td class="px-8 py-4 font-medium">🖊️ Pens</td>
+                  <td class="px-8 py-4 text-center text-lg font-bold text-primary">3,166</td>
+                  <td class="px-8 py-4 text-center text-sm text-gray-500">Expression tools</td>
+                </tr>
+                <tr class="hover:bg-light transition-colors duration-200">
+                  <td class="px-8 py-4 font-medium">✍ Sharpeners</td>
+                  <td class="px-8 py-4 text-center text-lg font-bold text-primary">1,583</td>
+                  <td class="px-8 py-4 text-center text-sm text-gray-500">Maintenance</td>
+                </tr>
+                <tr class="hover:bg-light transition-colors duration-200">
+                  <td class="px-8 py-4 font-medium">👝 Erasers</td>
+                  <td class="px-8 py-4 text-center text-lg font-bold text-primary">1,583</td>
+                  <td class="px-8 py-4 text-center text-sm text-gray-500">Learning from mistakes</td>
+                </tr>
+                <tr class="hover:bg-light transition-colors duration-200">
+                  <td class="px-8 py-4 font-medium">✏️ Pencils</td>
+                  <td class="px-8 py-4 text-center text-lg font-bold text-primary">1,583</td>
+                  <td class="px-8 py-4 text-center text-sm text-gray-500">Foundation writing</td>
+                </tr>
+                <tr class="hover:bg-light transition-colors duration-200">
+                  <td class="px-8 py-4 font-medium">💼 Pencil Pouches</td>
+                  <td class="px-8 py-4 text-center text-lg font-bold text-primary">1,583</td>
+                  <td class="px-8 py-4 text-center text-sm text-gray-500">Organization</td>
+                </tr>
+                <tr class="hover:bg-light transition-colors duration-200">
+                  <td class="px-8 py-4 font-medium">🎨 Color Pencils</td>
+                  <td class="px-8 py-4 text-center text-lg font-bold text-primary">18,996<span class="text-sm text-gray-500"> (1,583 sets)</span></td>
+                  <td class="px-8 py-4 text-center text-sm text-gray-500">Creative expression</td>
+                </tr>
+                <tr class="hover:bg-light transition-colors duration-200">
+                  <td class="px-8 py-4 font-medium">🎭 Drawing Books</td>
+                  <td class="px-8 py-4 text-center text-lg font-bold text-primary">1,583</td>
+                  <td class="px-8 py-4 text-center text-sm text-gray-500">Artistic development</td>
+                </tr>
+                <tr class="hover:bg-light transition-colors duration-200">
+                  <td class="px-8 py-4 font-medium">📁 Files & Tapes</td>
+                  <td class="px-8 py-4 text-center text-lg font-bold text-primary">3,166</td>
+                  <td class="px-8 py-4 text-center text-sm text-gray-500">Work organization</td>
+                </tr>
+                <tr class="bg-primary text-white font-bold">
+                  <td class="px-8 py-6 text-lg">🎯 Grand Total Items</td>
+                  <td class="px-8 py-6 text-center text-lg">36,409</td>
+                  <td class="px-8 py-6 text-center text-sm">Empowering Education</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schools Section -->
+    <section id="schools" class="py-24 md:py-32 bg-white/95 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-5">
+        <div class="absolute top-0 left-0 w-full h-full bg-repeat" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><pattern id=%22grain%22 width=%22100%22 height=%22100%22 patternUnits=%22userSpaceOnUse%22><circle cx=%2250%22 cy=%2250%22 r=%221%22 fill=%22%23000%22/></pattern></defs><rect width=%22100%22 height=%22100%22 fill=%22url(%23grain)%22/></svg>')"></div>
+      </div>
+      
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16 animate-fade-in">
+          <h2 class="text-4xl md:text-5xl font-black text-primary mb-6 font-serif">
+            Schools We Supported
+          </h2>
+          <p class="text-xl md:text-2xl max-w-4xl mx-auto text-gray-700 font-medium">
+            We collaborate with schools in Dharamsala to provide essential resources and support for Tibetan students.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-3xl shadow-2xl card-hover relative overflow-hidden group">
+            <div class="absolute top-0 right-0 w-20 h-20 bg-primary opacity-10 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500"></div>
+            <div class="relative">
+              <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
+                <img src="tcv.jpg" alt="School 1" class="w-full h-full object-cover scale-hover">
+              </div>
+              <h3 class="text-2xl font-bold text-primary mb-4 font-serif">Tibetan Children's Village</h3>
+              <p class="text-gray-600">Tibetan Children’s Villages (TCV) is a nonprofit organization established in 1960 in Dharamsala to care for and educate Tibetan refugee orphans and destitute children. Over time, TCV has grown into a large network of children’s villages, residential schools, and day schools across India, serving nearly 10,000 children and youth, and remains dedicated to providing a holistic education and preserving Tibetan culture. Its mission is to ensure that every child under its care receives sound education, develops a strong cultural identity, and becomes a self-reliant member of society.</p>
+            </div>
+          </div>
+
+          <div class="bg-white p-8 rounded-3xl shadow-2xl card-hover relative overflow-hidden group">
+            <div class="absolute top-0 right-0 w-20 h-20 bg-primary opacity-10 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500"></div>
+            <div class="relative">
+              <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
+                <img src="mewoenpetoen.png" alt="School 2" class="w-full h-full object-cover scale-hover">
+              </div>
+              <h3 class="text-2xl font-bold text-primary mb-4 font-serif">Mewoen Tsuglag Petoen School</h3>
+              <p class="text-gray-600">Mewoen Tsuglag Petoen School, founded in 2005 in Dharamsala, is a model school for Tibetan children in exile that combines modern education with traditional Tibetan language and values. Managed by the Sambhota Tibetan Schools Society, it teaches in Tibetan up to class III and introduces additional languages later, focusing on preserving Tibetan culture while providing quality education.</p>
+            </div>
+          </div>
+
+          <div class="bg-white p-8 rounded-3xl shadow-2xl card-hover relative overflow-hidden group">
+            <div class="absolute top-0 right-0 w-20 h-20 bg-primary opacity-10 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500"></div>
+            <div class="relative">
+              <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
+                <img src="dhasayongling.png" alt="School 3" class="w-full h-full object-cover scale-hover">
+              </div>
+              <h3 class="text-2xl font-bold text-primary mb-4 font-serif">Yongling Creche & Kinder Garten</h3>
+              <p class="text-gray-600">Yongling Crèche & Kindergarten, established in McLeod Ganj in 1984, serves to support working parents and meet the exile Tibetan government’s educational responsibilities for Tibetan children. The kindergarten is committed to providing a nurturing environment that encourages early childhood education. Currently, the school enrolls about 75 children, and also offers hostel facilities for some students to further support their learning and care.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 md:py-32 bg-white/95 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-5">
+        <div class="absolute top-0 left-0 w-full h-full bg-repeat" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><pattern id=%22grain%22 width=%22100%22 height=%22100%22 patternUnits=%22userSpaceOnUse%22><circle cx=%2250%22 cy=%2250%22 r=%221%22 fill=%22%23000%22/></pattern></defs><rect width=%22100%22 height=%22100%22 fill=%22url(%23grain)%22/></svg>')"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16 animate-fade-in">
+          <h2 class="text-4xl md:text-5xl font-black text-primary mb-6 font-serif">
+            Moments of Impact
+          </h2>
+          <p class="text-xl md:text-2xl max-w-4xl mx-auto text-gray-700 font-medium">
+            Capturing the positive changes that we are making.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div class="relative group overflow-hidden rounded-2xl card-hover bg-white p-4 shadow-lg">
+            <img src="image1.png" alt="Student smiling" class="w-full h-64 object-cover rounded-lg scale-hover">
+            <p class="text-gray-600 mt-4 text-center font-medium">Inspiring the youth</p>
+          </div>
+          <div class="relative group overflow-hidden rounded-2xl card-hover bg-white p-4 shadow-lg">
+            <img src="image3.jpeg" alt="Classroom activity" class="w-full h-64 object-cover rounded-lg scale-hover">
+            <p class="text-gray-600 mt-4 text-center font-medium">Classroom delivery</p>
+          </div>
+          <div class="relative group overflow-hidden rounded-2xl card-hover bg-white p-4 shadow-lg">
+            <img src="image2.jpeg" alt="Group study" class="w-full h-64 object-cover rounded-lg scale-hover">
+            <p class="text-gray-600 mt-4 text-center font-medium">Packaging supplies</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Donate Section -->
+    <section id="donate" class="py-24 md:py-32 bg-primary text-white relative overflow-hidden">
+      <div class="absolute inset-0 opacity-20">
+        <div class="absolute top-0 left-0 w-full h-full bg-repeat" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><pattern id=%22grain%22 width=%22100%22 height=%22100%22 patternUnits=%22userSpaceOnUse%22><circle cx=%2250%22 cy=%2250%22 r=%221%22 fill=%22%23fff%22/></pattern></defs><rect width=%22100%22 height=%22100%22 fill=%22url(%23grain)%22/></svg>')"></div>
+      </div>
+
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <div class="animate-fade-in">
+          <h2 class="text-4xl md:text-5xl font-black mb-6 font-serif">
+            Support Our Mission
+          </h2>
+          <p class="text-xl md:text-2xl mb-12 max-w-4xl mx-auto font-medium">
+            Every donation directly supports Tibetan youth by providing essential resources for education and community initiatives. Your contribution makes a lasting impact.
+          </p>
+        </div>
+
+        <div class="animate-slide-up">
+          <a href="https://www.paypal.com/donate?hosted_button_id=1234567890" target="_blank" rel="noopener noreferrer" class="bg-gold text-primary font-bold py-4 px-12 rounded-full text-lg transition-all duration-300 donate-button inline-flex items-center">
+            <i class="fas fa-heart mr-2"></i>
+            <span>Make a Donation</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Donors Section -->
+    <section id="donors" class="py-24 md:py-32 bg-white/95 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-5">
+        <div class="absolute top-0 left-0 w-full h-full bg-repeat" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><pattern id=%22grain%22 width=%22100%22 height=%22100%22 patternUnits=%22userSpaceOnUse%22><circle cx=%2250%22 cy=%2250%22 r=%221%22 fill=%22%23000%22/></pattern></defs><rect width=%22100%22 height=%22100%22 fill=%22url(%23grain)%22/></svg>')"></div>
+      </div>
+      
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16 animate-fade-in">
+          <h2 class="text-4xl md:text-5xl font-black text-primary mb-6 font-serif">
+            Our Generous Donors
+          </h2>
+          <p class="text-xl md:text-2xl max-w-4xl mx-auto text-gray-700 font-medium">
+            We are deeply grateful to the individuals who have supported our mission to empower Tibetan youth through their generous contributions.
+          </p>
+        </div>
+
+        <div class="bg-white p-10 rounded-3xl shadow-2xl animate-slide-up card-hover relative overflow-hidden">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="text-center">
+              <p class="text-lg font-medium text-gray-700">Jigme</p>
+            </div>
+            <div class="text-center">
+              <p class="text-lg font-medium text-gray-700">Dechen</p>
+            </div>
+            <div class="text-center">
+              <p class="text-lg font-medium text-gray-700">Daisy Kyi</p>
+            </div>
+            <div class="text-center">
+              <p class="text-lg font-medium text-gray-700">Nima Binara</p>
+            </div>
+            <div class="text-center">
+              <p class="text-lg font-medium text-gray-700">Tsering Kyi</p>
+            </div>
+            <div class="text-center">
+              <p class="text-lg font-medium text-gray-700">Rapten Gyatso</p>
+            </div>
+            <div class="text-center">
+              <p class="text-lg font-medium text-gray-700">Tsering Dhondup</p>
+            </div>
+            <div class="text-center">
+              <p class="text-lg font-medium text-gray-700">Tsering Shakya</p>
+            </div>
+            <div class="text-center">
+              <p class="text-lg font-medium text-gray-700">Drugjam</p>
+            </div>
+            <div class="text-center">
+              <p class="text-lg font-medium text-gray-700">Chakmo Tso</p>
+            </div>
+            <div class="text-center">
+              <p class="text-lg font-medium text-gray-700">Yangbum Gyal</p>
+            </div>
+            <div class="text-center">
+              <p class="text-lg font-medium text-gray-700">Warren Smith</p>
+            </div>
+            <div class="text-center">
+              <p class="text-lg font-medium text-gray-700">Dorjee Tseten</p>
+            </div>
+            <div class="text-center">
+              <p class="text-lg font-medium text-gray-700">Pema Bhum</p>
+            </div>
+            <div class="text-center">
+              <p class="text-lg font-medium text-gray-700">Tencho Gyatso</p>
+            </div>
+            <div class="text-center">
+              <p class="text-lg font-medium text-gray-700">Piero Tozzi</p>
+            </div>
+            <div class="text-center">
+              <p class="text-lg font-medium text-gray-700">Lhundup Amdo</p>
+            </div>
+            <div class="text-center">
+              <p class="text-lg font-medium text-gray-700">Kirti Kyap</p>
+            </div>
+            <div class="text-center">
+              <p class="text-lg font-medium text-gray-700">Konchok Dondup</p>
+            </div>
+            <div class="text-center">
+              <p class="text-lg font-medium text-gray-700">Tenzin Tethong</p>
+            </div>
+            <div class="text-center">
+              <p class="text-lg font-medium text-gray-700">Tenzin Dongyal</p>
+            </div>
+            <div class="text-center">
+              <p class="text-lg font-medium text-gray-700">Lumbum Tashi</p>
+            </div>
+            <div class="text-center">
+              <p class="text-lg font-medium text-gray-700">Jigme Dorjee</p>
+            </div>
+            <div class="text-center">
+              <p class="text-lg font-medium text-gray-700">Pema Dorjee</p>
+            </div>
+            <div class="text-center">
+              <p class="text-lg font-medium text-gray-700">Thaklha Gyal</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="bg-primary text-white text-center py-6">
-    2025 Tibetan Youth Initiative
+  <footer class="bg-primary text-white py-12 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+      <div class="absolute top-0 left-0 w-full h-full bg-repeat" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><pattern id=%22grain%22 width=%22100%22 height=%22100%22 patternUnits=%22userSpaceOnUse%22><circle cx=%2250%22 cy=%2250%22 r=%221%22 fill=%22%23fff%22/></pattern></defs><rect width=%22100%22 height=%22100%22 fill=%22url(%23grain)%22/></svg>')"></div>
+    </div>
+    
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mt-8 pt-6 border-t border-white/20 text-center">
+        <p class="text-sm">2025 Tibetan Youth Initiative</p>
+      </div>
+    </div>
   </footer>
 
+  <!-- JavaScript -->
+  <script>
+    // Navbar Scroll Effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      const logoText = document.getElementById('logo-text');
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+        logoText.classList.add('scrolled');
+        mobileMenuButton.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+        logoText.classList.remove('scrolled');
+        mobileMenuButton.classList.remove('scrolled');
+      }
+    });
+
+    // Progress Bar
+    window.addEventListener('scroll', () => {
+      const progressBar = document.getElementById('progress-bar');
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (window.scrollY / totalHeight) * 100;
+      progressBar.style.width = `${progress}%`;
+    });
+
+    // Mobile Menu Toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Smooth Scroll for Anchor Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth' });
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Intersection Observer for Animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-fade-in, .animate-slide-up').forEach(element => {
+      observer.observe(element);
+    });
+
+    // Donation Button Click Tracking
+    document.querySelectorAll('.donate-button').forEach(button => {
+      button.addEventListener('click', (e) => {
+        if (button.getAttribute('href').startsWith('http')) {
+          e.preventDefault();
+          const url = button.getAttribute('href');
+          // Basic click tracking (could integrate with analytics)
+          console.log('Donation button clicked');
+          window.open(url, '_blank', 'noopener,noreferrer');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
