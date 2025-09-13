@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -195,6 +195,18 @@
       position: relative;
       z-index: 1;
     }
+
+    /* NEW: subtle badge shine */
+    .shiny {
+      background: linear-gradient(110deg, rgba(255,255,255,0) 40%, rgba(255,255,255,.5) 50%, rgba(255,255,255,0) 60%) no-repeat;
+      background-size: 200% 100%;
+      animation: shine 2.5s linear infinite;
+    }
+
+    /* NEW: sticky blood-drive CTA */
+    .sticky-cta {
+      box-shadow: 0 10px 30px rgba(139,0,0,0.15);
+    }
   </style>
 </head>
 
@@ -202,6 +214,17 @@
 
   <!-- Progress Bar -->
   <div id="progress-bar" class="fixed top-0 left-0 z-50 h-1 bg-primary transition-all duration-300"></div>
+
+  <!-- NEW: Blood Drive Announcement Bar -->
+  <div class="w-full bg-accent text-primary-dark text-center py-3 px-4 font-semibold z-40">
+    <span class="inline-flex items-center gap-2">
+      <i class="fa-solid fa-droplet"></i>
+      <span>DMV Blood Drive — Get involved!</span>
+    </span>
+    <a href="#blood-drive" class="ml-3 underline font-bold hover:text-primary">Learn more</a>
+    <span class="mx-2">•</span>
+    <a class="underline font-bold hover:text-primary" href="mailto:tibetanyouthintiative@gmail.com?subject=DMV%20Blood%20Drive%20Interest&body=Hi%20Tibetan%20Youth%20Initiative%2C%0A%0AI%27m%20in%20the%20DMV%20area%20and%20would%20like%20to%20join%2Fhost%20the%20blood%20drive.%20Here%20are%20my%20details%3A%0A-%20Name%3A%20%0A-%20City%2FCounty%3A%20%0A-%20Preferred%20Dates%3A%20%0A-%20How%20I%27d%20like%20to%20help%3A%20Donate%20%2F%20Volunteer%20%2F%20Host%0A%0AThank%20you!">Email: tibetanyouthintiative@gmail.com</a>
+  </div>
 
   <!-- Header & Navigation -->
   <header class="fixed top-0 left-0 right-0 z-40 transition-all duration-300">
@@ -241,6 +264,12 @@
               Donors
               <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
             </a>
+
+            <!-- NEW: Blood Drive nav link -->
+            <a href="#blood-drive" class="bg-white/10 hover:bg-white text-white hover:text-primary font-bold py-2 px-6 rounded-full transition-all duration-300 magnetic-button border border-white/30">
+              <i class="fa-solid fa-droplet mr-2"></i>Blood Drive (DMV)
+            </a>
+
             <a href="#donate" class="bg-gold hover:bg-gold-dark text-primary font-bold py-2 px-6 rounded-full transition-all duration-300 magnetic-button">
               Donate Now
             </a>
@@ -263,6 +292,8 @@
           <a href="#schools" class="block py-3 px-4 text-sm hover:bg-primary-dark rounded-md transition-colors duration-300">Schools</a>
           <a href="#gallery" class="block py-3 px-4 text-sm hover:bg-primary-dark rounded-md transition-colors duration-300">Gallery</a>
           <a href="#donors" class="block py-3 px-4 text-sm hover:bg-primary-dark rounded-md transition-colors duration-300">Donors</a>
+          <!-- NEW: Blood Drive link in mobile -->
+          <a href="#blood-drive" class="block py-3 px-4 text-sm font-bold bg-white text-primary rounded-md hover:bg-accent transition-colors duration-300"><i class="fa-solid fa-droplet mr-2"></i>Blood Drive (DMV)</a>
           <a href="#donate" class="block py-3 px-4 text-sm font-bold bg-gold text-primary rounded-md hover:bg-gold-dark transition-colors duration-300">Donate Now</a>
         </div>
       </div>
@@ -304,10 +335,22 @@
           A youth-led initiative empowering Tibetan youth to drive impact through education, cultural preservation, and community development worldwide.
         </p>
       </div>
-      <div class="animate-slide-up flex flex-col sm:flex-row gap-4 justify-center" style="animation-delay: 0.6s;">
+
+      <!-- NEW: Hero Blood Drive Ribbon -->
+      <div class="animate-slide-up inline-flex items-center gap-3 bg-white text-primary font-extrabold py-3 px-5 rounded-full shadow-xl shiny" style="animation-delay: 0.6s;">
+        <i class="fa-solid fa-droplet"></i>
+        DMV Blood Drive — <span class="hidden sm:inline">Volunteer • Donate • Host</span>
+        <a href="mailto:tibetanyouthintiative@gmail.com?subject=DMV%20Blood%20Drive%20Interest&body=Hi%20Tibetan%20Youth%20Initiative%2C%0A%0AI%27m%20in%20the%20DMV%20area%20and%20would%20like%20to%20join%2Fhost%20the%20blood%20drive.%20Here%20are%20my%20details%3A%0A-%20Name%3A%20%0A-%20City%2FCounty%3A%20%0A-%20Preferred%20Dates%3A%20%0A-%20How%20I%27d%20like%20to%20help%3A%20Donate%20%2F%20Volunteer%20%2F%20Host%0A%0AThank%20you!" class="ml-2 underline">Email Us</a>
+      </div>
+
+      <div class="animate-slide-up flex flex-col sm:flex-row gap-4 justify-center mt-6" style="animation-delay: 0.8s;">
         <a href="#donate" class="bg-gold hover:bg-gold-dark text-primary font-bold py-4 px-10 rounded-full text-lg transition-all duration-300 donate-button">
           <i class="fas fa-heart mr-2"></i>
           Support Our Mission
+        </a>
+        <a href="#blood-drive" class="glass-effect hover:bg-white hover:text-primary font-bold py-4 px-10 rounded-full text-lg transition-all duration-300 scale-hover">
+          <i class="fa-solid fa-droplet mr-2"></i>
+          Join the Blood Drive
         </a>
         <a href="#about" class="glass-effect hover:bg-white hover:text-primary font-bold py-4 px-10 rounded-full text-lg transition-all duration-300 scale-hover">
           <i class="fas fa-arrow-down mr-2"></i>
@@ -325,6 +368,62 @@
   </section>
 
   <main>
+    <!-- NEW: Blood Drive Section -->
+    <section id="blood-drive" class="py-24 md:py-32 bg-white/95 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-5">
+        <div class="absolute top-0 left-0 w-full h-full bg-repeat" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><pattern id=%22grain%22 width=%22100%22 height=%22100%22 patternUnits=%22userSpaceOnUse%22><circle cx=%2250%22 cy=%2250%22 r=%221%22 fill=%22%23000%22/></pattern></defs><rect width=%22100%22 height=%22100%22 fill=%22url(%23grain)%22/></svg>')"></div>
+      </div>
+
+      <div class="max-w-6xl mx-auto px-6 space-y-12">
+        <div class="text-center animate-fade-in">
+          <span class="inline-flex items-center gap-2 text-sm uppercase tracking-widest text-primary font-bold bg-accent/70 px-4 py-2 rounded-full">
+            <i class="fa-solid fa-location-dot"></i> DMV Area (DC • Maryland • Virginia)
+          </span>
+          <h2 class="text-4xl md:text-5xl font-black text-primary mb-6 mt-4 font-serif">
+            Blood Drive — Join, Donate, or Host
+          </h2>
+          <p class="text-xl md:text-2xl leading-relaxed text-gray-700 max-w-3xl mx-auto font-medium">
+            We’re organizing a community blood drive in the DMV. If you live in the area and want to <span class="font-semibold">donate blood</span>, <span class="font-semibold">volunteer</span>, or <span class="font-semibold">host</span> a site, email us:
+          </p>
+          <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="mailto:tibetanyouthintiative@gmail.com?subject=DMV%20Blood%20Drive%20—%20I%20want%20to%20help&body=Hi%20Tibetan%20Youth%20Initiative%2C%0A%0AI%27m%20in%20the%20DMV%20area%20and%20I%27d%20like%20to%20%5Bdonate%2Fvolunteer%2Fhost%5D.%0A-%20Name%3A%0A-%20City%2FCounty%3A%0A-%20Preferred%20dates%3A%0A-%20How%20I%20can%20help%3A%0A%0AThank%20you!" class="donate-button text-primary font-extrabold py-4 px-8 rounded-full inline-flex items-center">
+              <i class="fa-solid fa-envelope mr-2"></i>
+              Email tibetanyouthintiative@gmail.com
+            </a>
+            <a href="mailto:tibetanyouthintiative@gmail.com?subject=Question%20about%20the%20DMV%20Blood%20Drive&body=Hi%20Tibetan%20Youth%20Initiative%2C%0A%0AI%20have%20a%20question%20about%20the%20blood%20drive%20in%20the%20DMV.%0A-%20My%20question%3A%0A%0AThanks!" class="glass-effect hover:bg-primary hover:text-white text-primary font-bold py-4 px-8 rounded-full inline-flex items-center transition-all duration-300">
+              <i class="fa-solid fa-circle-question mr-2"></i>
+              Ask a Question
+            </a>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-3xl shadow-2xl card-hover">
+            <div class="text-primary text-4xl mb-4"><i class="fa-solid fa-hand-holding-heart"></i></div>
+            <h3 class="text-2xl font-bold text-primary mb-2 font-serif">Why It Matters</h3>
+            <p class="text-gray-700">Every donation can save up to <span class="font-semibold">three lives</span>. Local hospitals rely on community drives to keep supplies ready for emergencies and ongoing treatments.</p>
+          </div>
+          <div class="bg-white p-8 rounded-3xl shadow-2xl card-hover">
+            <div class="text-primary text-4xl mb-4"><i class="fa-solid fa-people-group"></i></div>
+            <h3 class="text-2xl font-bold text-primary mb-2 font-serif">Who Can Help</h3>
+            <p class="text-gray-700">DMV residents—students, parents, community leaders. You can <span class="font-semibold">donate</span>, <span class="font-semibold">volunteer</span> on-site, or <span class="font-semibold">host</span> a location at schools, centers, or places of worship.</p>
+          </div>
+          <div class="bg-white p-8 rounded-3xl shadow-2xl card-hover">
+            <div class="text-primary text-4xl mb-4"><i class="fa-solid fa-calendar-check"></i></div>
+            <h3 class="text-2xl font-bold text-primary mb-2 font-serif">Next Steps</h3>
+            <p class="text-gray-700">Email us with your <span class="font-semibold">city</span>, <span class="font-semibold">preferred dates</span>, and how you’d like to help. We’ll follow up with details and simple checklists.</p>
+          </div>
+        </div>
+
+        <div class="bg-accent/60 border border-accent-dark p-6 rounded-2xl text-center">
+          <p class="text-primary text-lg font-semibold">
+            Questions about eligibility? We’ll point you to official guidance when you email 
+            <a class="underline" href="mailto:tibetanyouthintiative@gmail.com?subject=Eligibility%20question%20—%20DMV%20Blood%20Drive">tibetanyouthintiative@gmail.com</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- About & Founder Section -->
     <section id="about" class="py-24 md:py-32 bg-white/95 relative overflow-hidden">
       <div class="absolute inset-0 opacity-5">
@@ -717,6 +816,17 @@
       </div>
     </div>
   </footer>
+
+  <!-- NEW: Sticky footer CTA -->
+  <div class="fixed bottom-4 left-1/2 -translate-x-1/2 z-40">
+    <div class="sticky-cta bg-white text-primary border border-primary/20 rounded-full px-5 py-3 shadow-2xl flex items-center gap-3">
+      <i class="fa-solid fa-droplet"></i>
+      <span class="font-semibold">DMV Blood Drive: want to help?</span>
+      <a href="mailto:tibetanyouthintiative@gmail.com?subject=DMV%20Blood%20Drive%20Interest" class="bg-primary text-white rounded-full px-4 py-2 font-bold hover:bg-primary-dark transition">
+        Email Us
+      </a>
+    </div>
+  </div>
 
   <!-- JavaScript -->
   <script>
