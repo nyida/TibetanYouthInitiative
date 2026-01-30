@@ -1,13 +1,16 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TibetanYouthInitiative - Empowering Through Education</title>
-  
+
+  <!-- Favicon: logo.png -->
+  <link rel="icon" type="image/png" href="logo.png" />
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
+
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,90 +67,82 @@
   </script>
 
   <style>
-    html { 
-      scroll-behavior: smooth; 
+    html {
+      scroll-behavior: smooth;
     }
-    
+
     .scrolled {
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(139, 0, 0, 0.1);
     }
-    
+
     .scrolled a {
       color: #8B0000 !important;
     }
-    
-    .scrolled .logo-text, .scrolled #mobile-menu-button {
-      color: #8B0000 !important;
-    }
-    
+
     .glass-effect {
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.2);
     }
-    
+
     .hero-gradient {
       background: linear-gradient(135deg, rgba(139, 0, 0, 0.9), rgba(218, 165, 32, 0.7));
     }
-    
+
     .card-hover {
       transition: all 0.3s ease;
     }
-    
+
     .card-hover:hover {
       transform: translateY(-8px);
       box-shadow: 0 20px 40px rgba(139, 0, 0, 0.15);
     }
-    
+
     .parallax {
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
     }
-    
+
     .typing-animation {
       overflow: hidden;
       border-right: 3px solid #8B0000;
       animation: typing 3s steps(40, end), blink-caret 1s step-end infinite;
     }
-    
+
     @keyframes typing {
       from { width: 0 }
       to { width: 100% }
     }
-    
+
     @keyframes blink-caret {
       from, to { border-color: transparent }
       50% { border-color: #8B0000 }
     }
-    
+
     .progress-bar {
       height: 4px;
       background: #8B0000;
       border-radius: 2px;
       animation: progress 2s ease-in-out;
     }
-    
+
     @keyframes progress {
       from { width: 0 }
     }
-    
-    .floating-icon {
-      animation: float 3s ease-in-out infinite;
-    }
-    
+
     .scale-hover:hover {
       transform: scale(1.05);
     }
-    
+
     .magnetic-button {
       position: relative;
       overflow: hidden;
     }
-    
+
     .magnetic-button::before {
       content: '';
       position: absolute;
@@ -158,7 +153,7 @@
       background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
       transition: left 0.5s;
     }
-    
+
     .magnetic-button:hover::before {
       left: 100%;
     }
@@ -171,7 +166,7 @@
       transition: all 0.3s ease;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
-    
+
     .donate-button:hover {
       background-position: right center;
       transform: translateY(-2px);
@@ -196,16 +191,10 @@
       z-index: 1;
     }
 
-    /* NEW: subtle badge shine */
     .shiny {
       background: linear-gradient(110deg, rgba(255,255,255,0) 40%, rgba(255,255,255,.5) 50%, rgba(255,255,255,0) 60%) no-repeat;
       background-size: 200% 100%;
       animation: shine 2.5s linear infinite;
-    }
-
-    /* NEW: sticky blood-drive CTA */
-    .sticky-cta {
-      box-shadow: 0 10px 30px rgba(139,0,0,0.15);
     }
   </style>
 </head>
@@ -215,23 +204,11 @@
   <!-- Progress Bar -->
   <div id="progress-bar" class="fixed top-0 left-0 z-50 h-1 bg-primary transition-all duration-300"></div>
 
-  <!-- NEW: Blood Drive Announcement Bar -->
-  <div class="w-full bg-accent text-primary-dark text-center py-3 px-4 font-semibold z-40">
-    <span class="inline-flex items-center gap-2">
-      <i class="fa-solid fa-droplet"></i>
-      <span>DMV Blood Drive — Get involved!</span>
-    </span>
-    <a href="#blood-drive" class="ml-3 underline font-bold hover:text-primary">Learn more</a>
-    <span class="mx-2">•</span>
-    <a class="underline font-bold hover:text-primary" href="mailto:tibetanyouthintiative@gmail.com?subject=DMV%20Blood%20Drive%20Interest&body=Hi%20Tibetan%20Youth%20Initiative%2C%0A%0AI%27m%20in%20the%20DMV%20area%20and%20would%20like%20to%20join%2Fhost%20the%20blood%20drive.%20Here%20are%20my%20details%3A%0A-%20Name%3A%20%0A-%20City%2FCounty%3A%20%0A-%20Preferred%20Dates%3A%20%0A-%20How%20I%27d%20like%20to%20help%3A%20Donate%20%2F%20Volunteer%20%2F%20Host%0A%0AThank%20you!">Email: tibetanyouthintiative@gmail.com</a>
-  </div>
-
   <!-- Header & Navigation -->
   <header class="fixed top-0 left-0 right-0 z-40 transition-all duration-300">
     <nav id="navbar" class="text-white py-4">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between">
-          
           <!-- Logo -->
           <a href="#hero" class="flex items-center flex-shrink-0">
             <div class="h-12 w-12 rounded-full flex items-center justify-center overflow-hidden">
@@ -241,7 +218,7 @@
               Tibetan Youth Initiative
             </span>
           </a>
-          
+
           <!-- Desktop Menu -->
           <div class="hidden md:flex items-center space-x-8 font-semibold">
             <a href="#about" class="relative hover:text-accent transition-colors duration-300 group">
@@ -264,12 +241,6 @@
               Donors
               <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
             </a>
-
-            <!-- NEW: Blood Drive nav link -->
-            <a href="#blood-drive" class="bg-white/10 hover:bg-white text-white hover:text-primary font-bold py-2 px-6 rounded-full transition-all duration-300 magnetic-button border border-white/30">
-              <i class="fa-solid fa-droplet mr-2"></i>Blood Drive (DMV)
-            </a>
-
             <a href="#donate" class="bg-gold hover:bg-gold-dark text-primary font-bold py-2 px-6 rounded-full transition-all duration-300 magnetic-button">
               Donate Now
             </a>
@@ -283,7 +254,7 @@
           </div>
         </div>
       </div>
-      
+
       <!-- Mobile Menu -->
       <div id="mobile-menu" class="hidden md:hidden glass-effect">
         <div class="px-2 pt-2 pb-3 space-y-1">
@@ -292,8 +263,6 @@
           <a href="#schools" class="block py-3 px-4 text-sm hover:bg-primary-dark rounded-md transition-colors duration-300">Schools</a>
           <a href="#gallery" class="block py-3 px-4 text-sm hover:bg-primary-dark rounded-md transition-colors duration-300">Gallery</a>
           <a href="#donors" class="block py-3 px-4 text-sm hover:bg-primary-dark rounded-md transition-colors duration-300">Donors</a>
-          <!-- NEW: Blood Drive link in mobile -->
-          <a href="#blood-drive" class="block py-3 px-4 text-sm font-bold bg-white text-primary rounded-md hover:bg-accent transition-colors duration-300"><i class="fa-solid fa-droplet mr-2"></i>Blood Drive (DMV)</a>
           <a href="#donate" class="block py-3 px-4 text-sm font-bold bg-gold text-primary rounded-md hover:bg-gold-dark transition-colors duration-300">Donate Now</a>
         </div>
       </div>
@@ -301,32 +270,14 @@
   </header>
 
   <!-- Hero Section -->
-  <section id="hero" class="h-screen bg-cover bg-center flex items-center justify-center text-white relative parallax" 
-           style="background-image: url('background1.png');">
+  <section id="hero" class="h-screen bg-cover bg-center flex items-center justify-center text-white relative parallax" style="background-image: url('background1.png');">
     <div class="absolute inset-0 hero-gradient"></div>
-    
-    <!-- Floating Elements -->
-    <div class="absolute top-1/4 left-1/4 opacity-20">
-      <div class="floating-icon text-4xl text-gold">
-        <i class="fas fa-book-open"></i>
-      </div>
-    </div>
-    <div class="absolute top-1/3 right-1/4 opacity-20">
-      <div class="floating-icon text-3xl text-accent" style="animation-delay: 1s;">
-        <i class="fas fa-pencil-alt"></i>
-      </div>
-    </div>
-    <div class="absolute bottom-1/4 left-1/3 opacity-20">
-      <div class="floating-icon text-5xl text-gold" style="animation-delay: 2s;">
-        <i class="fas fa-heart"></i>
-      </div>
-    </div>
-    
+
     <div class="text-center z-10 px-4 max-w-5xl mx-auto">
       <div class="animate-slide-up">
         <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight font-serif">
-          Empowering 
-          <span class="text-gold">Tibetan Youth</span> 
+          Empowering
+          <span class="text-gold">Tibetan Youth</span>
           for Change
         </h1>
       </div>
@@ -336,21 +287,10 @@
         </p>
       </div>
 
-      <!-- NEW: Hero Blood Drive Ribbon -->
-      <div class="animate-slide-up inline-flex items-center gap-3 bg-white text-primary font-extrabold py-3 px-5 rounded-full shadow-xl shiny" style="animation-delay: 0.6s;">
-        <i class="fa-solid fa-droplet"></i>
-        DMV Blood Drive — <span class="hidden sm:inline">Volunteer • Donate • Host</span>
-        <a href="mailto:tibetanyouthintiative@gmail.com?subject=DMV%20Blood%20Drive%20Interest&body=Hi%20Tibetan%20Youth%20Initiative%2C%0A%0AI%27m%20in%20the%20DMV%20area%20and%20would%20like%20to%20join%2Fhost%20the%20blood%20drive.%20Here%20are%20my%20details%3A%0A-%20Name%3A%20%0A-%20City%2FCounty%3A%20%0A-%20Preferred%20Dates%3A%20%0A-%20How%20I%27d%20like%20to%20help%3A%20Donate%20%2F%20Volunteer%20%2F%20Host%0A%0AThank%20you!" class="ml-2 underline">Email Us</a>
-      </div>
-
       <div class="animate-slide-up flex flex-col sm:flex-row gap-4 justify-center mt-6" style="animation-delay: 0.8s;">
         <a href="#donate" class="bg-gold hover:bg-gold-dark text-primary font-bold py-4 px-10 rounded-full text-lg transition-all duration-300 donate-button">
           <i class="fas fa-heart mr-2"></i>
           Support Our Mission
-        </a>
-        <a href="#blood-drive" class="glass-effect hover:bg-white hover:text-primary font-bold py-4 px-10 rounded-full text-lg transition-all duration-300 scale-hover">
-          <i class="fa-solid fa-droplet mr-2"></i>
-          Join the Blood Drive
         </a>
         <a href="#about" class="glass-effect hover:bg-white hover:text-primary font-bold py-4 px-10 rounded-full text-lg transition-all duration-300 scale-hover">
           <i class="fas fa-arrow-down mr-2"></i>
@@ -358,7 +298,7 @@
         </a>
       </div>
     </div>
-    
+
     <!-- Scroll Indicator -->
     <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
       <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
@@ -368,78 +308,22 @@
   </section>
 
   <main>
-    <!-- NEW: Blood Drive Section -->
-    <section id="blood-drive" class="py-24 md:py-32 bg-white/95 relative overflow-hidden">
-      <div class="absolute inset-0 opacity-5">
-        <div class="absolute top-0 left-0 w-full h-full bg-repeat" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><pattern id=%22grain%22 width=%22100%22 height=%22100%22 patternUnits=%22userSpaceOnUse%22><circle cx=%2250%22 cy=%2250%22 r=%221%22 fill=%22%23000%22/></pattern></defs><rect width=%22100%22 height=%22100%22 fill=%22url(%23grain)%22/></svg>')"></div>
-      </div>
-
-      <div class="max-w-6xl mx-auto px-6 space-y-12">
-        <div class="text-center animate-fade-in">
-          <span class="inline-flex items-center gap-2 text-sm uppercase tracking-widest text-primary font-bold bg-accent/70 px-4 py-2 rounded-full">
-            <i class="fa-solid fa-location-dot"></i> DMV Area (DC • Maryland • Virginia)
-          </span>
-          <h2 class="text-4xl md:text-5xl font-black text-primary mb-6 mt-4 font-serif">
-            Blood Drive — Join, Donate, or Host
-          </h2>
-          <p class="text-xl md:text-2xl leading-relaxed text-gray-700 max-w-3xl mx-auto font-medium">
-            We’re organizing a community blood drive in the DMV. If you live in the area and want to <span class="font-semibold">donate blood</span>, <span class="font-semibold">volunteer</span>, or <span class="font-semibold">host</span> a site, email us:
-          </p>
-          <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="mailto:tibetanyouthintiative@gmail.com?subject=DMV%20Blood%20Drive%20—%20I%20want%20to%20help&body=Hi%20Tibetan%20Youth%20Initiative%2C%0A%0AI%27m%20in%20the%20DMV%20area%20and%20I%27d%20like%20to%20%5Bdonate%2Fvolunteer%2Fhost%5D.%0A-%20Name%3A%0A-%20City%2FCounty%3A%0A-%20Preferred%20dates%3A%0A-%20How%20I%20can%20help%3A%0A%0AThank%20you!" class="donate-button text-primary font-extrabold py-4 px-8 rounded-full inline-flex items-center">
-              <i class="fa-solid fa-envelope mr-2"></i>
-              Email tibetanyouthintiative@gmail.com
-            </a>
-            <a href="mailto:tibetanyouthintiative@gmail.com?subject=Question%20about%20the%20DMV%20Blood%20Drive&body=Hi%20Tibetan%20Youth%20Initiative%2C%0A%0AI%20have%20a%20question%20about%20the%20blood%20drive%20in%20the%20DMV.%0A-%20My%20question%3A%0A%0AThanks!" class="glass-effect hover:bg-primary hover:text-white text-primary font-bold py-4 px-8 rounded-full inline-flex items-center transition-all duration-300">
-              <i class="fa-solid fa-circle-question mr-2"></i>
-              Ask a Question
-            </a>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-white p-8 rounded-3xl shadow-2xl card-hover">
-            <div class="text-primary text-4xl mb-4"><i class="fa-solid fa-hand-holding-heart"></i></div>
-            <h3 class="text-2xl font-bold text-primary mb-2 font-serif">Why It Matters</h3>
-            <p class="text-gray-700">Every donation can save up to <span class="font-semibold">three lives</span>. Local hospitals rely on community drives to keep supplies ready for emergencies and ongoing treatments.</p>
-          </div>
-          <div class="bg-white p-8 rounded-3xl shadow-2xl card-hover">
-            <div class="text-primary text-4xl mb-4"><i class="fa-solid fa-people-group"></i></div>
-            <h3 class="text-2xl font-bold text-primary mb-2 font-serif">Who Can Help</h3>
-            <p class="text-gray-700">DMV residents—students, parents, community leaders. You can <span class="font-semibold">donate</span>, <span class="font-semibold">volunteer</span> on-site, or <span class="font-semibold">host</span> a location at schools, centers, or places of worship.</p>
-          </div>
-          <div class="bg-white p-8 rounded-3xl shadow-2xl card-hover">
-            <div class="text-primary text-4xl mb-4"><i class="fa-solid fa-calendar-check"></i></div>
-            <h3 class="text-2xl font-bold text-primary mb-2 font-serif">Next Steps</h3>
-            <p class="text-gray-700">Email us with your <span class="font-semibold">city</span>, <span class="font-semibold">preferred dates</span>, and how you’d like to help. We’ll follow up with details and simple checklists.</p>
-          </div>
-        </div>
-
-        <div class="bg-accent/60 border border-accent-dark p-6 rounded-2xl text-center">
-          <p class="text-primary text-lg font-semibold">
-            Questions about eligibility? We’ll point you to official guidance when you email 
-            <a class="underline" href="mailto:tibetanyouthintiative@gmail.com?subject=Eligibility%20question%20—%20DMV%20Blood%20Drive">tibetanyouthintiative@gmail.com</a>.
-          </p>
-        </div>
-      </div>
-    </section>
-
     <!-- About & Founder Section -->
     <section id="about" class="py-24 md:py-32 bg-white/95 relative overflow-hidden">
       <div class="absolute inset-0 opacity-5">
         <div class="absolute top-0 left-0 w-full h-full bg-repeat" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><pattern id=%22grain%22 width=%22100%22 height=%22100%22 patternUnits=%22userSpaceOnUse%22><circle cx=%2250%22 cy=%2250%22 r=%221%22 fill=%22%23000%22/></pattern></defs><rect width=%22100%22 height=%22100%22 fill=%22url(%23grain)%22/></svg>')"></div>
       </div>
-      
+
       <div class="max-w-6xl mx-auto px-6 space-y-16 relative">
         <div class="text-center animate-fade-in">
           <h2 class="text-4xl md:text-5xl font-black text-primary mb-8 font-serif">
             Our Story
           </h2>
           <p class="text-xl md:text-2xl leading-relaxed text-gray-700 max-w-4xl mx-auto font-medium">
-            Tibetan Youth Initiative is a nonprofit led by high school students passionate about our heritage. We are dedicated to empowering Tibetan youth worldwide through education, cultural preservation, and community initiatives, fostering leadership and impact in diverse areas.
+            Tibetan Youth Initiative is a 501(c)(3) nonprofit led by high school students passionate about our heritage. We are dedicated to empowering Tibetan youth worldwide through education, cultural preservation, and community initiatives, fostering leadership and impact in diverse areas.
           </p>
         </div>
-        
+
         <div class="bg-white p-10 md:p-16 rounded-3xl shadow-2xl animate-slide-up card-hover relative overflow-hidden">
           <div class="space-y-6 text-center lg:text-left">
             <div>
@@ -448,9 +332,9 @@
               </h3>
               <p class="text-xl text-gold font-semibold">Nyida Gyal</p>
             </div>
-            
+
             <blockquote class="text-lg md:text-xl leading-relaxed text-gray-700 italic border-l-4 border-gold pl-6">
-              "Our team of high schoolers is passionate about making a change, and doing so through requires a sense of obligation. Significant change is not achieved all at once, but is accumulated through an abundance of time, people, and consistent efforts. For any high schoolers interested in becoming involved with the Tibetan Youth Intiative, feel free to email us at tibetanyouthinitiative@gmail.com, and be a part of making change from local communities to across the world."
+              "Our team of high schoolers is passionate about making a change, and doing so requires a sense of obligation. Significant change is not achieved all at once, but is accumulated through an abundance of time, people, and consistent efforts. For any high schoolers interested in becoming involved with the Tibetan Youth Initiative, feel free to email us at tibetanyouthinitiative@gmail.com, and be a part of making change from local communities to across the world."
             </blockquote>
           </div>
         </div>
@@ -462,7 +346,7 @@
       <div class="absolute inset-0 opacity-10">
         <div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle at 25% 25%, rgba(139, 0, 0, 0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(218, 165, 32, 0.1) 0%, transparent 50%)"></div>
       </div>
-      
+
       <div class="max-w-7xl mx-auto px-6 relative">
         <div class="text-center mb-16 animate-fade-in">
           <h2 class="text-4xl md:text-5xl font-black text-primary mb-6 font-serif">
@@ -472,12 +356,12 @@
             Through the generosity of our community, we've made a tangible difference. Here is our progress to date, with every number representing a life touched and a future brightened.
           </p>
         </div>
-        
+
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
           <div class="bg-white p-10 rounded-3xl shadow-2xl card-hover relative overflow-hidden group">
             <div class="absolute top-0 right-0 w-20 h-20 bg-primary opacity-10 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500"></div>
             <div class="relative text-center">
-              <div class="text-primary text-6xl mb-4 floating-icon">
+              <div class="text-primary text-6xl mb-4">
                 <i class="fas fa-child-reaching"></i>
               </div>
               <div class="text-5xl md:text-6xl font-black text-primary mb-2">1,500+</div>
@@ -486,11 +370,11 @@
               <p class="text-sm text-gray-500 mt-2">Across 3 schools in Dharamsala</p>
             </div>
           </div>
-          
+
           <div class="bg-white p-10 rounded-3xl shadow-2xl card-hover relative overflow-hidden group">
             <div class="absolute top-0 right-0 w-20 h-20 bg-primary opacity-10 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500"></div>
             <div class="relative text-center">
-              <div class="text-primary text-6xl mb-4 floating-icon" style="animation-delay: 0.5s;">
+              <div class="text-primary text-6xl mb-4">
                 <i class="fas fa-pencil-ruler"></i>
               </div>
               <div class="text-5xl md:text-6xl font-black text-primary mb-2">36,000+</div>
@@ -499,11 +383,11 @@
               <p class="text-sm text-gray-500 mt-2">Essential learning materials</p>
             </div>
           </div>
-          
+
           <div class="bg-white p-10 rounded-3xl shadow-2xl card-hover relative overflow-hidden group">
             <div class="absolute top-0 right-0 w-20 h-20 bg-primary opacity-10 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500"></div>
             <div class="relative text-center">
-              <div class="text-primary text-6xl mb-4 floating-icon" style="animation-delay: 1s;">
+              <div class="text-primary text-6xl mb-4">
                 <i class="fas fa-hand-holding-dollar"></i>
               </div>
               <div class="text-5xl md:text-6xl font-black text-primary mb-2">$3,000+</div>
@@ -521,7 +405,7 @@
             </h3>
             <p class="text-accent text-center mt-2">Every item makes a difference</p>
           </div>
-          
+
           <div class="overflow-x-auto">
             <table class="w-full">
               <thead class="bg-gray-50">
@@ -599,7 +483,7 @@
       <div class="absolute inset-0 opacity-5">
         <div class="absolute top-0 left-0 w-full h-full bg-repeat" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><pattern id=%22grain%22 width=%22100%22 height=%22100%22 patternUnits=%22userSpaceOnUse%22><circle cx=%2250%22 cy=%2250%22 r=%221%22 fill=%22%23000%22/></pattern></defs><rect width=%22100%22 height=%22100%22 fill=%22url(%23grain)%22/></svg>')"></div>
       </div>
-      
+
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-16 animate-fade-in">
           <h2 class="text-4xl md:text-5xl font-black text-primary mb-6 font-serif">
@@ -710,7 +594,7 @@
       <div class="absolute inset-0 opacity-5">
         <div class="absolute top-0 left-0 w-full h-full bg-repeat" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><pattern id=%22grain%22 width=%22100%22 height=%22100%22 patternUnits=%22userSpaceOnUse%22><circle cx=%2250%22 cy=%2250%22 r=%221%22 fill=%22%23000%22/></pattern></defs><rect width=%22100%22 height=%22100%22 fill=%22url(%23grain)%22/></svg>')"></div>
       </div>
-      
+
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-16 animate-fade-in">
           <h2 class="text-4xl md:text-5xl font-black text-primary mb-6 font-serif">
@@ -809,24 +693,13 @@
     <div class="absolute inset-0 opacity-20">
       <div class="absolute top-0 left-0 w-full h-full bg-repeat" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><pattern id=%22grain%22 width=%22100%22 height=%22100%22 patternUnits=%22userSpaceOnUse%22><circle cx=%2250%22 cy=%2250%22 r=%221%22 fill=%22%23fff%22/></pattern></defs><rect width=%22100%22 height=%22100%22 fill=%22url(%23grain)%22/></svg>')"></div>
     </div>
-    
+
     <div class="max-w-7xl mx-auto px-6">
       <div class="mt-8 pt-6 border-t border-white/20 text-center">
-        <p class="text-sm">2025 Tibetan Youth Initiative</p>
+        <p class="text-sm">2025 Tibetan Youth Initiative • 501(c)(3) Registered Nonprofit</p>
       </div>
     </div>
   </footer>
-
-  <!-- NEW: Sticky footer CTA -->
-  <div class="fixed bottom-4 left-1/2 -translate-x-1/2 z-40">
-    <div class="sticky-cta bg-white text-primary border border-primary/20 rounded-full px-5 py-3 shadow-2xl flex items-center gap-3">
-      <i class="fa-solid fa-droplet"></i>
-      <span class="font-semibold">DMV Blood Drive: want to help?</span>
-      <a href="mailto:tibetanyouthintiative@gmail.com?subject=DMV%20Blood%20Drive%20Interest" class="bg-primary text-white rounded-full px-4 py-2 font-bold hover:bg-primary-dark transition">
-        Email Us
-      </a>
-    </div>
-  </div>
 
   <!-- JavaScript -->
   <script>
@@ -837,12 +710,8 @@
       const mobileMenuButton = document.getElementById('mobile-menu-button');
       if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
-        logoText.classList.add('scrolled');
-        mobileMenuButton.classList.add('scrolled');
       } else {
         navbar.classList.remove('scrolled');
-        logoText.classList.remove('scrolled');
-        mobileMenuButton.classList.remove('scrolled');
       }
     });
 
@@ -879,7 +748,6 @@
         }
       });
     }, { threshold: 0.1 });
-
     document.querySelectorAll('.animate-fade-in, .animate-slide-up').forEach(element => {
       observer.observe(element);
     });
@@ -890,7 +758,6 @@
         if (button.getAttribute('href').startsWith('http')) {
           e.preventDefault();
           const url = button.getAttribute('href');
-          // Basic click tracking (could integrate with analytics)
           console.log('Donation button clicked');
           window.open(url, '_blank', 'noopener,noreferrer');
         }
