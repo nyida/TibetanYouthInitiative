@@ -31,112 +31,34 @@
         <a href="pages/briefs.html"><i class="fas fa-file-alt" aria-hidden="true"></i>Publications</a>
         <a href="pages/impact.html"><i class="fas fa-chart-bar" aria-hidden="true"></i>Impact</a>
       </div>
-      <nav aria-label="Page sections">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="#research">Programs</a></li>
-          <li><a href="#impact">Impact</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-        </ul>
-      </nav>
     </div>
     <div class="header-image">
       <img src="logo.png" alt="Tibetan Youth Initiative logo">
     </div>
   </header>
 
-  <main id="main">
-    <section id="about" aria-labelledby="about-heading">
-      <h2 id="about-heading">About</h2>
+  <main id="main" class="tabs">
+    <div class="tab-list-wrap">
+      <div role="tablist" aria-label="Site sections" class="tab-list" data-tab-list>
+        <button type="button" role="tab" id="tab-about" aria-selected="true" aria-controls="panel-about" data-tab-hash="about" tabindex="0">About</button>
+        <button type="button" role="tab" id="tab-publications" aria-selected="false" aria-controls="panel-publications" data-tab-hash="publications" tabindex="-1">Publications</button>
+        <button type="button" role="tab" id="tab-programs" aria-selected="false" aria-controls="panel-programs" data-tab-hash="programs" tabindex="-1">Programs</button>
+        <button type="button" role="tab" id="tab-impact" aria-selected="false" aria-controls="panel-impact" data-tab-hash="impact" tabindex="-1">Impact</button>
+        <button type="button" role="tab" id="tab-gallery" aria-selected="false" aria-controls="panel-gallery" data-tab-hash="gallery" tabindex="-1">Gallery</button>
+        <button type="button" role="tab" id="tab-support" aria-selected="false" aria-controls="panel-support" data-tab-hash="support" tabindex="-1">Support</button>
+      </div>
+    </div>
+
+    <section role="tabpanel" id="panel-about" aria-labelledby="tab-about" class="tab-panel">
+      <h2>About</h2>
       <p>
         Tibetan Youth Initiative (TYI) is a registered 501(c)(3) nonprofit supporting Tibetan youth through education programs, cultural preservation, and evidence-based policy advocacy. Founded by <strong>Nyida Gyal</strong>, TYI operates in partnership with schools in Dharamsala, India, and submits research to international institutions including the United Nations, the European Commission, OpenAI, Anthropic, and the Digital Regulation Cooperation Forum.
       </p>
       <p>
         Our work combines direct programmatic support—school supplies, classroom resources, and community engagement—with substantive policy briefs that advance youth rights, education equity, and minority protections in global forums.
       </p>
-    </section>
 
-    <section id="publications" aria-labelledby="publications-heading">
-      <h2 id="publications-heading">Publications &amp; Full Reports</h2>
-      <p>All INFO REPORTS are listed below. Click any title or &ldquo;Read Full Report&rdquo; to open the complete text.</p>
-
-      <ol class="publication-list">
-        <li class="publication-item">
-          <h3 class="pub-title"><a href="articles/youth-led-educational-interventions.html">Youth-Led Educational Interventions, Material Security and Digital Governance for Displaced Youth</a></h3>
-          <p class="pub-authors"><span class="highlight-name">Nyida Gyal</span>, <span class="highlight-name">Thomas Millward</span>, <span class="highlight-name">Khadotso Gyal</span>, <span class="highlight-name">Tyler Jeong</span></p>
-          <p class="pub-venue">European Commission, DG Employment, Social Affairs and Inclusion — European Child Guarantee [Ares(2026)2684187], 2026</p>
-          <p class="pub-actions"><a href="articles/youth-led-educational-interventions.html" class="pub-fulltext-link">Read Full Report</a> <span class="pub-award">Submitted</span></p>
-        </li>
-
-        <li class="publication-item">
-          <h3 class="pub-title"><a href="articles/mental-health-youth-human-rights.html">The Impact of Mental Health Challenges on the Enjoyment of Human Rights by Young People</a></h3>
-          <p class="pub-authors"><span class="highlight-name">Khadotso Gyal</span>, <span class="highlight-name">Nyida Gyal</span></p>
-          <p class="pub-venue">UN Office of the High Commissioner for Human Rights — Youth Mental Health and Human Rights, 2026</p>
-          <p class="pub-actions"><a href="articles/mental-health-youth-human-rights.html" class="pub-fulltext-link">Read Full Report</a> <span class="pub-award">Submitted</span></p>
-        </li>
-
-        <li class="publication-item">
-          <h3 class="pub-title"><a href="articles/new-technologies-transitional-justice.html">New Technologies and Transitional Justice</a></h3>
-          <p class="pub-authors"><span class="highlight-name">Nyida Gyal</span></p>
-          <p class="pub-venue">UN Office of the High Commissioner for Human Rights — New Technologies and Transitional Justice, 2025</p>
-          <p class="pub-actions">
-            <a href="articles/new-technologies-transitional-justice.html" class="pub-fulltext-link">Read Full Report</a>
-            <a href="https://papers.ssrn.com/sol3/Delivery.cfm/5976274.pdf?abstractid=5976274&amp;mirid=1" class="pub-secondary-link" target="_blank" rel="noopener noreferrer">PDF</a>
-            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5976274" class="pub-secondary-link" target="_blank" rel="noopener noreferrer">SSRN</a>
-            <span class="pub-award">Published</span>
-          </p>
-        </li>
-
-        <li class="publication-item">
-          <h3 class="pub-title"><a href="articles/minority-rights-diaspora.html">Rights of Persons Belonging to National or Ethnic, Religious and Linguistic Minorities</a></h3>
-          <p class="pub-authors"><span class="highlight-name">Khadotso Gyal</span>, <span class="highlight-name">Thomas Millward</span>, <span class="highlight-name">Nyida Gyal</span></p>
-          <p class="pub-venue">UN OHCHR — 2026 Report of the Secretary-General on Minority Rights, 2026</p>
-          <p class="pub-actions">
-            <a href="articles/minority-rights-diaspora.html" class="pub-fulltext-link">Read Full Report</a>
-            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6464679" class="pub-secondary-link" target="_blank" rel="noopener noreferrer">SSRN</a>
-            <span class="pub-award">Published</span>
-          </p>
-        </li>
-
-        <li class="publication-item">
-          <h3 class="pub-title"><a href="articles/ai-supply-chain-openai.html">Mitigating Peripheral Supply Chain Dependencies in Frontier AI</a></h3>
-          <p class="pub-authors"><span class="highlight-name">Nyida Gyal</span>, <span class="highlight-name">Khadotso Gyal</span></p>
-          <p class="pub-venue">OpenAI Global Affairs &amp; Procurement — US AI Supply Chain RFP, 2026</p>
-          <p class="pub-actions"><a href="articles/ai-supply-chain-openai.html" class="pub-fulltext-link">Read Full Report</a> <span class="pub-award">Submitted</span></p>
-        </li>
-
-        <li class="publication-item">
-          <h3 class="pub-title"><a href="articles/algorithmic-safety-drcf.html">Algorithmic Safety and Cognitive Vulnerabilities in Generative AI (DRCF)</a></h3>
-          <p class="pub-authors"><span class="highlight-name">Nyida Gyal</span>, <span class="highlight-name">Thomas Millward</span></p>
-          <p class="pub-venue">Digital Regulation Cooperation Forum — Algorithmic Safety and Generative AI Interfaces, 2026</p>
-          <p class="pub-actions"><a href="articles/algorithmic-safety-drcf.html" class="pub-fulltext-link">Read Full Report</a> <span class="pub-award">Submitted</span></p>
-        </li>
-
-        <li class="publication-item">
-          <h3 class="pub-title"><a href="articles/algorithmic-safety-anthropic.html">Algorithmic Safety and Cognitive Vulnerabilities in Generative AI (Anthropic)</a></h3>
-          <p class="pub-authors"><span class="highlight-name">Nyida Gyal</span>, <span class="highlight-name">Thomas Millward</span></p>
-          <p class="pub-venue">Anthropic Public Policy &amp; Global Affairs — Mitigating Algorithmic Risks in Frontier Models, 2026</p>
-          <p class="pub-actions"><a href="articles/algorithmic-safety-anthropic.html" class="pub-fulltext-link">Read Full Report</a> <span class="pub-award">Submitted</span></p>
-        </li>
-      </ol>
-    </section>
-
-    <section id="research" aria-labelledby="research-heading">
-      <h2 id="research-heading">Programs &amp; Research</h2>
-      <p>Our work spans <strong>direct education support and international policy advocacy</strong>. Current program areas include:</p>
-      <ul>
-        <li><strong>Educational Access</strong> — Distribution of learning materials to partner schools in Dharamsala (<a href="#impact">1,500+ students supported</a>)</li>
-        <li><strong>Cultural Preservation</strong> — Supporting Tibetan language instruction and heritage programming in exile communities</li>
-        <li><strong>Human Rights &amp; Minority Protections</strong> (<a href="#publications">UN OHCHR submissions, 2025–2026</a>)</li>
-        <li><strong>Youth Mental Health &amp; Well-Being</strong> (<a href="#publications">UN OHCHR submission, 2026</a>)</li>
-        <li><strong>Transitional Justice &amp; Technology Governance</strong> (<a href="https://papers.ssrn.com/sol3/Delivery.cfm/5976274.pdf?abstractid=5976274&amp;mirid=1" target="_blank" rel="noopener noreferrer">SSRN, 2025</a>)</li>
-        <li><strong>Displaced Youth Education Policy</strong> (<a href="#publications">European Commission submission, 2026</a>)</li>
-      </ul>
-    </section>
-
-    <section id="news" aria-labelledby="news-heading">
-      <h2 id="news-heading">News</h2>
+      <h3>News</h3>
       <div class="news-container">
         <ul class="news-list">
           <li><strong>01/2026:</strong> Submitted algorithmic safety briefs to the DRCF and Anthropic on cognitive vulnerabilities in generative AI for youth.</li>
@@ -152,54 +74,162 @@
       </div>
     </section>
 
-    <section id="impact" aria-labelledby="impact-heading">
-      <h2 id="impact-heading">Impact</h2>
-      <div class="award-item">
-        <span class="award-year">2025</span>
-        <div class="award-desc"><strong>1,500+</strong> students supported across three partner schools in Dharamsala</div>
+    <section role="tabpanel" id="panel-publications" aria-labelledby="tab-publications" class="tab-panel" hidden>
+      <h2>Publications &amp; Full Reports</h2>
+      <p class="tab-lede">Complete INFO REPORTS with full text. Select any report to read the entire submission.</p>
+
+      <ul class="publication-list">
+        <li class="publication-card">
+          <a href="articles/youth-led-educational-interventions.html" class="pub-card-image">
+            <img src="a272eaf0-3160-496d-af2c-09c54d46d118.png" alt="Cover: Youth-Led Educational Interventions report">
+          </a>
+          <div class="pub-card-body">
+            <h3 class="pub-title"><a href="articles/youth-led-educational-interventions.html">Youth-Led Educational Interventions, Material Security and Digital Governance for Displaced Youth</a></h3>
+            <p class="pub-authors"><span class="highlight-name">Nyida Gyal</span>, <span class="highlight-name">Thomas Millward</span>, <span class="highlight-name">Khadotso Gyal</span>, <span class="highlight-name">Tyler Jeong</span></p>
+            <p class="pub-venue">European Commission — European Child Guarantee [Ares(2026)2684187], 2026</p>
+            <p class="pub-actions"><a href="articles/youth-led-educational-interventions.html" class="pub-fulltext-link">Read Full Report</a> <span class="pub-award">Submitted</span></p>
+          </div>
+        </li>
+
+        <li class="publication-card">
+          <a href="articles/mental-health-youth-human-rights.html" class="pub-card-image">
+            <img src="journal.pmen.0000543.g001.PNG" alt="Cover: Mental Health and Youth Human Rights report">
+          </a>
+          <div class="pub-card-body">
+            <h3 class="pub-title"><a href="articles/mental-health-youth-human-rights.html">The Impact of Mental Health Challenges on the Enjoyment of Human Rights by Young People</a></h3>
+            <p class="pub-authors"><span class="highlight-name">Khadotso Gyal</span>, <span class="highlight-name">Nyida Gyal</span></p>
+            <p class="pub-venue">UN OHCHR — Youth Mental Health and Human Rights, 2026</p>
+            <p class="pub-actions"><a href="articles/mental-health-youth-human-rights.html" class="pub-fulltext-link">Read Full Report</a> <span class="pub-award">Submitted</span></p>
+          </div>
+        </li>
+
+        <li class="publication-card">
+          <a href="articles/new-technologies-transitional-justice.html" class="pub-card-image">
+            <img src="images.png" alt="Cover: New Technologies and Transitional Justice report">
+          </a>
+          <div class="pub-card-body">
+            <h3 class="pub-title"><a href="articles/new-technologies-transitional-justice.html">New Technologies and Transitional Justice</a></h3>
+            <p class="pub-authors"><span class="highlight-name">Nyida Gyal</span></p>
+            <p class="pub-venue">UN OHCHR — New Technologies and Transitional Justice, 2025</p>
+            <p class="pub-actions">
+              <a href="articles/new-technologies-transitional-justice.html" class="pub-fulltext-link">Read Full Report</a>
+              <a href="https://papers.ssrn.com/sol3/Delivery.cfm/5976274.pdf?abstractid=5976274&amp;mirid=1" class="pub-secondary-link" target="_blank" rel="noopener noreferrer">PDF</a>
+              <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5976274" class="pub-secondary-link" target="_blank" rel="noopener noreferrer">SSRN</a>
+              <span class="pub-award">Published</span>
+            </p>
+          </div>
+        </li>
+
+        <li class="publication-card">
+          <a href="articles/minority-rights-diaspora.html" class="pub-card-image">
+            <img src="b87107dc-1040-4d23-86a6-b6707f0b3b3b.png" alt="Cover: Minority Rights and Diaspora Governance report">
+          </a>
+          <div class="pub-card-body">
+            <h3 class="pub-title"><a href="articles/minority-rights-diaspora.html">Rights of Persons Belonging to National or Ethnic, Religious and Linguistic Minorities</a></h3>
+            <p class="pub-authors"><span class="highlight-name">Khadotso Gyal</span>, <span class="highlight-name">Thomas Millward</span>, <span class="highlight-name">Nyida Gyal</span></p>
+            <p class="pub-venue">UN OHCHR — 2026 Report on Minority Rights, 2026</p>
+            <p class="pub-actions">
+              <a href="articles/minority-rights-diaspora.html" class="pub-fulltext-link">Read Full Report</a>
+              <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6464679" class="pub-secondary-link" target="_blank" rel="noopener noreferrer">SSRN</a>
+              <span class="pub-award">Published</span>
+            </p>
+          </div>
+        </li>
+
+        <li class="publication-card">
+          <a href="articles/ai-supply-chain-openai.html" class="pub-card-image">
+            <img src="a272eaf0-3160-496d-af2c-09c54d46d118.png" alt="Cover: AI Supply Chain policy brief">
+          </a>
+          <div class="pub-card-body">
+            <h3 class="pub-title"><a href="articles/ai-supply-chain-openai.html">Mitigating Peripheral Supply Chain Dependencies in Frontier AI</a></h3>
+            <p class="pub-authors"><span class="highlight-name">Nyida Gyal</span>, <span class="highlight-name">Khadotso Gyal</span></p>
+            <p class="pub-venue">OpenAI Global Affairs &amp; Procurement — US AI Supply Chain RFP, 2026</p>
+            <p class="pub-actions"><a href="articles/ai-supply-chain-openai.html" class="pub-fulltext-link">Read Full Report</a> <span class="pub-award">Submitted</span></p>
+          </div>
+        </li>
+
+        <li class="publication-card">
+          <a href="articles/algorithmic-safety-drcf.html" class="pub-card-image">
+            <img src="images.png" alt="Cover: Algorithmic Safety DRCF brief">
+          </a>
+          <div class="pub-card-body">
+            <h3 class="pub-title"><a href="articles/algorithmic-safety-drcf.html">Algorithmic Safety and Cognitive Vulnerabilities in Generative AI (DRCF)</a></h3>
+            <p class="pub-authors"><span class="highlight-name">Nyida Gyal</span>, <span class="highlight-name">Thomas Millward</span></p>
+            <p class="pub-venue">Digital Regulation Cooperation Forum, 2026</p>
+            <p class="pub-actions"><a href="articles/algorithmic-safety-drcf.html" class="pub-fulltext-link">Read Full Report</a> <span class="pub-award">Submitted</span></p>
+          </div>
+        </li>
+
+        <li class="publication-card">
+          <a href="articles/algorithmic-safety-anthropic.html" class="pub-card-image">
+            <img src="images.png" alt="Cover: Algorithmic Safety Anthropic brief">
+          </a>
+          <div class="pub-card-body">
+            <h3 class="pub-title"><a href="articles/algorithmic-safety-anthropic.html">Algorithmic Safety and Cognitive Vulnerabilities in Generative AI (Anthropic)</a></h3>
+            <p class="pub-authors"><span class="highlight-name">Nyida Gyal</span>, <span class="highlight-name">Thomas Millward</span></p>
+            <p class="pub-venue">Anthropic Public Policy &amp; Global Affairs, 2026</p>
+            <p class="pub-actions"><a href="articles/algorithmic-safety-anthropic.html" class="pub-fulltext-link">Read Full Report</a> <span class="pub-award">Submitted</span></p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section role="tabpanel" id="panel-programs" aria-labelledby="tab-programs" class="tab-panel" hidden>
+      <h2>Programs &amp; Research</h2>
+      <p>Our work spans <strong>direct education support and international policy advocacy</strong>. Current program areas include:</p>
+      <ul>
+        <li><strong>Educational Access</strong> — Distribution of learning materials to partner schools in Dharamsala</li>
+        <li><strong>Cultural Preservation</strong> — Supporting Tibetan language instruction and heritage programming in exile communities</li>
+        <li><strong>Human Rights &amp; Minority Protections</strong> — UN OHCHR submissions, 2025–2026</li>
+        <li><strong>Youth Mental Health &amp; Well-Being</strong> — UN OHCHR submission, 2026</li>
+        <li><strong>Transitional Justice &amp; Technology Governance</strong> — <a href="https://papers.ssrn.com/sol3/Delivery.cfm/5976274.pdf?abstractid=5976274&amp;mirid=1" target="_blank" rel="noopener noreferrer">SSRN, 2025</a></li>
+        <li><strong>Displaced Youth Education Policy</strong> — European Commission submission, 2026</li>
+      </ul>
+
+      <h3>Partner Schools</h3>
+      <div class="school-grid">
+        <figure class="school-card">
+          <img src="tcv.jpg" alt="Tibetan Children's Village campus">
+          <figcaption><a href="pages/schools.html">Tibetan Children's Village</a></figcaption>
+        </figure>
+        <figure class="school-card">
+          <img src="mewoenpetoen.png" alt="Mewoen Tsuglag Petoen School">
+          <figcaption><a href="pages/schools.html">Mewoen Tsuglag Petoen School</a></figcaption>
+        </figure>
+        <figure class="school-card">
+          <img src="dhasayongling.png" alt="Yongling Crèche and Kindergarten">
+          <figcaption><a href="pages/schools.html">Yongling Crèche &amp; Kindergarten</a></figcaption>
+        </figure>
       </div>
-      <div class="award-item">
-        <span class="award-year">2025</span>
-        <div class="award-desc"><strong>36,409</strong> educational supply items distributed (notebooks, pens, art materials, and more)</div>
-      </div>
-      <div class="award-item">
-        <span class="award-year">2025</span>
-        <div class="award-desc"><strong>$3,000+</strong> raised and deployed entirely to direct programmatic activities</div>
-      </div>
-      <div class="award-item">
-        <span class="award-year">2025</span>
-        <div class="award-desc"><strong>4</strong> policy briefs submitted to UN OHCHR and the European Commission</div>
+    </section>
+
+    <section role="tabpanel" id="panel-impact" aria-labelledby="tab-impact" class="tab-panel" hidden>
+      <h2>Impact</h2>
+      <div class="impact-grid">
+        <div class="impact-stat">
+          <span class="impact-stat__value">1,500+</span>
+          <span class="impact-stat__label">Students supported across three partner schools in Dharamsala</span>
+        </div>
+        <div class="impact-stat">
+          <span class="impact-stat__value">36,409</span>
+          <span class="impact-stat__label">Educational supply items distributed</span>
+        </div>
+        <div class="impact-stat">
+          <span class="impact-stat__value">$3,000+</span>
+          <span class="impact-stat__label">Raised and deployed to direct programmatic activities</span>
+        </div>
+        <div class="impact-stat">
+          <span class="impact-stat__value">7</span>
+          <span class="impact-stat__label">Policy briefs submitted to international bodies</span>
+        </div>
       </div>
       <p><a href="pages/impact.html">View detailed impact report &rarr;</a></p>
     </section>
 
-    <section id="partners" aria-labelledby="partners-heading">
-      <h2 id="partners-heading">Partners &amp; Services</h2>
-      <div class="service-category">
-        <div class="service-title">Partner Schools</div>
-        <p>
-          <a href="pages/schools.html">Tibetan Children's Village</a>,
-          <a href="pages/schools.html">Mewoen Tsuglag Petoen School</a>,
-          <a href="pages/schools.html">Yongling Crèche &amp; Kindergarten</a>
-        </p>
-      </div>
-      <div class="service-category">
-        <div class="service-title">International Submissions</div>
-        <p>UN Office of the High Commissioner for Human Rights (2025, 2026); European Commission, DG Employment, Social Affairs and Inclusion (2026)</p>
-      </div>
-      <div class="service-category">
-        <div class="service-title">Leadership</div>
-        <p><strong>Nyida Gyal</strong>, Founder &amp; Lead Director — <a href="pages/about.html">Organizational profile</a></p>
-      </div>
-      <div class="service-category">
-        <div class="service-title">Research Team</div>
-        <p>Nyida Gyal, Khadotso Gyal, Thomas Millward, Tyler Jeong</p>
-      </div>
-    </section>
-
-    <section id="gallery" aria-labelledby="gallery-heading">
-      <h2 id="gallery-heading">Gallery</h2>
-      <div class="gallery-grid">
+    <section role="tabpanel" id="panel-gallery" aria-labelledby="tab-gallery" class="tab-panel" hidden>
+      <h2>Gallery</h2>
+      <p class="tab-lede">Photographs from supply distribution and classroom engagement activities.</p>
+      <div class="gallery-grid gallery-grid--large">
         <figure class="gallery-item">
           <img src="image1.png" alt="Student participating in a classroom session">
           <figcaption>Student engagement session</figcaption>
@@ -216,43 +246,39 @@
       <p><a href="pages/gallery.html">View full gallery &rarr;</a></p>
     </section>
 
-    <section id="support" aria-labelledby="support-heading">
-      <h2 id="support-heading">Support &amp; Acknowledgments</h2>
-      <div class="misc-item">
-        <p>
-          TYI gratefully acknowledges the individuals whose contributions have sustained our programs. To support our mission, please visit our <a href="pages/donate.html">donation page</a> or contact us at <a href="mailto:tibetanyouthinitiative@gmail.com">tibetanyouthinitiative@gmail.com</a>.
-        </p>
-      </div>
-      <div class="service-category">
-        <div class="service-title">Donors</div>
-        <ul class="donor-list">
-          <li>Jigme</li>
-          <li>Dechen</li>
-          <li>Daisy Kyi</li>
-          <li>Nima Binara</li>
-          <li>Tsering Kyi</li>
-          <li>Rapten Gyatso</li>
-          <li>Tsering Dhondup</li>
-          <li>Tsering Shakya</li>
-          <li>Drugjam</li>
-          <li>Chakmo Tso</li>
-          <li>Yangbum Gyal</li>
-          <li>Warren Smith</li>
-          <li>Dorjee Tseten</li>
-          <li>Pema Bhum</li>
-          <li>Tencho Gyatso</li>
-          <li>Piero Tozzi</li>
-          <li>Lhundup Amdo</li>
-          <li>Kirti Kyap</li>
-          <li>Konchok Dondup</li>
-          <li>Tenzin Tethong</li>
-          <li>Tenzin Dongyal</li>
-          <li>Lumbum Tashi</li>
-          <li>Jigme Dorjee</li>
-          <li>Pema Dorjee</li>
-          <li>Thaklha Gyal</li>
-        </ul>
-      </div>
+    <section role="tabpanel" id="panel-support" aria-labelledby="tab-support" class="tab-panel" hidden>
+      <h2>Support &amp; Acknowledgments</h2>
+      <p>
+        TYI gratefully acknowledges the individuals whose contributions have sustained our programs. To support our mission, please visit our <a href="pages/donate.html">donation page</a> or contact us at <a href="mailto:tibetanyouthinitiative@gmail.com">tibetanyouthinitiative@gmail.com</a>.
+      </p>
+      <h3>Donors</h3>
+      <ul class="donor-list">
+        <li>Jigme</li>
+        <li>Dechen</li>
+        <li>Daisy Kyi</li>
+        <li>Nima Binara</li>
+        <li>Tsering Kyi</li>
+        <li>Rapten Gyatso</li>
+        <li>Tsering Dhondup</li>
+        <li>Tsering Shakya</li>
+        <li>Drugjam</li>
+        <li>Chakmo Tso</li>
+        <li>Yangbum Gyal</li>
+        <li>Warren Smith</li>
+        <li>Dorjee Tseten</li>
+        <li>Pema Bhum</li>
+        <li>Tencho Gyatso</li>
+        <li>Piero Tozzi</li>
+        <li>Lhundup Amdo</li>
+        <li>Kirti Kyap</li>
+        <li>Konchok Dondup</li>
+        <li>Tenzin Tethong</li>
+        <li>Tenzin Dongyal</li>
+        <li>Lumbum Tashi</li>
+        <li>Jigme Dorjee</li>
+        <li>Pema Dorjee</li>
+        <li>Thaklha Gyal</li>
+      </ul>
     </section>
   </main>
 
@@ -264,6 +290,6 @@
     </p>
   </footer>
 
-  <script src="assets/js/scripts.js" defer></script>
+  <script src="assets/js/tabs.js" defer></script>
 </body>
 </html>
