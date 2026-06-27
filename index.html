@@ -3,701 +3,218 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Tibetan Youth Initiative - A nonprofit organization dedicated to empowering Tibetan youth through education, cultural preservation, and community development.">
-  
-  <title>Tibetan Youth Initiative - Empowering Tibetan Youth</title>
-  
+  <meta name="description" content="Tibetan Youth Initiative — A nonprofit organization advancing educational access, cultural preservation, and evidence-based policy advocacy for Tibetan youth.">
+  <meta name="keywords" content="Tibetan Youth, Education, Nonprofit, Policy Research, Human Rights, Dharamsala">
+  <meta name="author" content="Tibetan Youth Initiative">
+  <meta property="og:title" content="Tibetan Youth Initiative">
+  <meta property="og:description" content="Advancing education, culture, and policy for Tibetan youth.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tibetanyouthinitiative.org/">
+  <meta name="twitter:card" content="summary">
+  <title>Tibetan Youth Initiative</title>
   <link rel="icon" href="logo.png">
   <link rel="apple-touch-icon" href="logo.png">
-  
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#8B0000',
-            'primary-dark': '#6e0000',
-            'primary-light': '#a31515',
-            accent: '#FEEBCB',
-            'accent-dark': '#f4d19b',
-            light: '#FDF7F0',
-            gold: '#FFD700',
-            'gold-dark': '#DAA520',
-          },
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            serif: ['Playfair Display', 'serif'],
-          },
-          animation: {
-            'fade-in': 'fadeIn 0.8s ease-in-out',
-            'slide-up': 'slideUp 0.8s ease-out',
-          },
-          keyframes: {
-            fadeIn: {
-              '0%': { opacity: '0' },
-              '100%': { opacity: '1' },
-            },
-            slideUp: {
-              '0%': { transform: 'translateY(30px)', opacity: '0' },
-              '100%': { transform: 'translateY(0)', opacity: '1' },
-            },
-          },
-        }
-      }
-    }
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="assets/css/styles.css">
-
-  <style>
-    .hero-gradient {
-      background: linear-gradient(135deg, rgba(139, 0, 0, 0.9), rgba(218, 165, 32, 0.7));
-    }
-
-    .glass-effect {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .card-hover {
-      transition: all 0.3s ease;
-    }
-
-    .card-hover:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(139, 0, 0, 0.15);
-    }
-
-    .parallax {
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    .progress-bar {
-      height: 4px;
-      background: #8B0000;
-      border-radius: 2px;
-    }
-
-    .scale-hover:hover {
-      transform: scale(1.05);
-    }
-
-    .donate-button {
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(90deg, #FFD700, #DAA520);
-      background-size: 200% auto;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .donate-button:hover {
-      background-position: right center;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-    }
-  </style>
 </head>
-<body class="bg-light text-gray-800 font-sans">
+<body id="top">
+  <a href="#main" class="skip-link">Skip to main content</a>
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">
-        <img src="logo.png" alt="TYI Logo">
-        <span>Tibetan Youth Initiative</span>
-      </a>
-      
-      <ul class="nav-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="pages/about.html">About</a></li>
-        <li><a href="pages/briefs.html">Policy Briefs</a></li>
-        <li><a href="pages/impact.html">Impact</a></li>
-        <li><a href="pages/schools.html">Partner Schools</a></li>
-        <li><a href="pages/gallery.html">Gallery</a></li>
-        <li><a href="pages/donate.html" class="nav-cta">Donate</a></li>
-      </ul>
-      
-      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section id="hero" class="h-screen bg-cover bg-center flex items-center justify-center text-white relative parallax" style="background-image: url('background1.png');">
-    <div class="absolute inset-0 hero-gradient"></div>
-
-    <div class="text-center z-10 px-4 max-w-5xl mx-auto">
-      <div class="animate-slide-up">
-        <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight font-serif">
-          Empowering
-          <span class="text-gold">Tibetan Youth</span>
-          for Change
-        </h1>
+  <header>
+    <div class="header-content">
+      <h1>Tibetan Youth Initiative</h1>
+      <p>Student-Led Nonprofit &bull; Education, Culture &amp; Policy Advocacy</p>
+      <div class="social-links-header">
+        <a href="mailto:tibetanyouthinitiative@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i>Email</a>
+        <a href="pages/donate.html"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i>Donate</a>
+        <a href="pages/briefs.html"><i class="fas fa-file-alt" aria-hidden="true"></i>Publications</a>
+        <a href="pages/impact.html"><i class="fas fa-chart-bar" aria-hidden="true"></i>Impact</a>
       </div>
-      <div class="animate-slide-up" style="animation-delay: 0.3s;">
-        <p class="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200 font-medium">
-          A student-led effort helping Tibetan youth learn, grow, and stay connected to their culture through real support and community projects.
+      <nav aria-label="Page sections">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#research">Programs</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#impact">Impact</a></li>
+          <li><a href="#partners">Partners</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header-image">
+      <img src="logo.png" alt="Tibetan Youth Initiative logo">
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About</h2>
+      <p>
+        Tibetan Youth Initiative (TYI) is a student-led nonprofit organization supporting Tibetan youth through education programs, cultural preservation, and evidence-based policy advocacy. Founded by <strong>Nyida Gyal</strong>, TYI operates in partnership with schools in Dharamsala, India, and submits research to international institutions including the United Nations and the European Commission.
+      </p>
+      <p>
+        Our work combines direct programmatic support—school supplies, classroom resources, and community engagement—with substantive policy briefs that advance youth rights, education equity, and minority protections in global forums.
+      </p>
+    </section>
+
+    <section id="research" aria-labelledby="research-heading">
+      <h2 id="research-heading">Programs &amp; Research</h2>
+      <p>Our work spans <strong>direct education support and international policy advocacy</strong>. Current program areas include:</p>
+      <ul>
+        <li><strong>Educational Access</strong> — Distribution of learning materials to partner schools in Dharamsala (<a href="#impact">1,500+ students supported</a>)</li>
+        <li><strong>Cultural Preservation</strong> — Supporting Tibetan language instruction and heritage programming in exile communities</li>
+        <li><strong>Human Rights &amp; Minority Protections</strong> (<a href="#publications">UN OHCHR submissions, 2025–2026</a>)</li>
+        <li><strong>Youth Mental Health &amp; Well-Being</strong> (<a href="#publications">UN OHCHR submission, 2026</a>)</li>
+        <li><strong>Transitional Justice &amp; Technology Governance</strong> (<a href="https://papers.ssrn.com/sol3/Delivery.cfm/5976274.pdf?abstractid=5976274&amp;mirid=1" target="_blank" rel="noopener noreferrer">SSRN, 2025</a>)</li>
+        <li><strong>Displaced Youth Education Policy</strong> (<a href="#publications">European Commission submission, 2026</a>)</li>
+      </ul>
+    </section>
+
+    <section id="news" aria-labelledby="news-heading">
+      <h2 id="news-heading">News</h2>
+      <div class="news-container">
+        <ul class="news-list">
+          <li><strong>01/2026:</strong> Submitted policy brief on mental health and young people's human rights to UN OHCHR.</li>
+          <li><strong>01/2026:</strong> Submitted minority rights policy brief to UN OHCHR (SSRN publication available).</li>
+          <li><strong>12/2025:</strong> Submitted youth-led educational interventions brief to the European Commission.</li>
+          <li><strong>06/2025:</strong> Published <em>New Technologies and Transitional Justice</em> via SSRN following UN OHCHR submission.</li>
+          <li><strong>2025:</strong> Distributed 36,409 educational supply items across three partner schools in Dharamsala.</li>
+          <li><strong>2025:</strong> Supported 1,500+ students through direct programmatic partnerships.</li>
+          <li><strong>2024:</strong> Expanded partnership network to include Tibetan Children's Village, Mewoen Tsuglag Petoen School, and Yongling Crèche &amp; Kindergarten.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="publications" aria-labelledby="publications-heading">
+      <div class="publications-header">
+        <h2 id="toggle-header">Selected Publications</h2>
+        <button type="button" id="toggle-publications" class="toggle-publications" aria-expanded="false" aria-controls="publications-container">Show All</button>
+      </div>
+      <div id="publications-container" aria-live="polite">
+        <p class="pub-loading">Loading publications&hellip;</p>
+      </div>
+      <p><a href="pages/briefs.html">View full policy brief archive &rarr;</a></p>
+    </section>
+
+    <section id="impact" aria-labelledby="impact-heading">
+      <h2 id="impact-heading">Impact</h2>
+      <div class="award-item">
+        <span class="award-year">2025</span>
+        <div class="award-desc"><strong>1,500+</strong> students supported across three partner schools in Dharamsala</div>
+      </div>
+      <div class="award-item">
+        <span class="award-year">2025</span>
+        <div class="award-desc"><strong>36,409</strong> educational supply items distributed (notebooks, pens, art materials, and more)</div>
+      </div>
+      <div class="award-item">
+        <span class="award-year">2025</span>
+        <div class="award-desc"><strong>$3,000+</strong> raised and deployed entirely to direct programmatic activities</div>
+      </div>
+      <div class="award-item">
+        <span class="award-year">2025</span>
+        <div class="award-desc"><strong>4</strong> policy briefs submitted to UN OHCHR and the European Commission</div>
+      </div>
+      <p><a href="pages/impact.html">View detailed impact report &rarr;</a></p>
+    </section>
+
+    <section id="partners" aria-labelledby="partners-heading">
+      <h2 id="partners-heading">Partners &amp; Services</h2>
+      <div class="service-category">
+        <div class="service-title">Partner Schools</div>
+        <p>
+          <a href="pages/schools.html">Tibetan Children's Village</a>,
+          <a href="pages/schools.html">Mewoen Tsuglag Petoen School</a>,
+          <a href="pages/schools.html">Yongling Crèche &amp; Kindergarten</a>
         </p>
       </div>
-
-      <div class="animate-slide-up flex flex-col sm:flex-row gap-4 justify-center mt-6" style="animation-delay: 0.8s;">
-        <a href="#donate" class="bg-gold hover:bg-gold-dark text-primary font-bold py-4 px-10 rounded-full text-lg transition-all duration-300 donate-button">
-          <i class="fas fa-heart mr-2"></i>
-          Join the Cause
-        </a>
-        <a href="#about" class="glass-effect hover:bg-white hover:text-primary font-bold py-4 px-10 rounded-full text-lg transition-all duration-300 scale-hover">
-          <i class="fas fa-arrow-down mr-2"></i>
-          Learn More
-        </a>
+      <div class="service-category">
+        <div class="service-title">International Submissions</div>
+        <p>UN Office of the High Commissioner for Human Rights (2025, 2026); European Commission, DG Employment, Social Affairs and Inclusion (2026)</p>
       </div>
-    </div>
-
-    <!-- Scroll Indicator -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-      <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-        <div class="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+      <div class="service-category">
+        <div class="service-title">Leadership</div>
+        <p><strong>Nyida Gyal</strong>, Founder &amp; Lead Director — <a href="pages/about.html">Organizational profile</a></p>
       </div>
-    </div>
-  </section>
-
-  <main>
-    <!-- About & Founder Section -->
-    <section id="about" class="py-24 md:py-32 bg-white/95 relative overflow-hidden">
-      <div class="absolute inset-0 opacity-5">
-        <div class="absolute top-0 left-0 w-full h-full bg-repeat" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><pattern id=%22grain%22 width=%22100%22 height=%22100%22 patternUnits=%22userSpaceOnUse%22><circle cx=%2250%22 cy=%2250%22 r=%221%22 fill=%22%23000%22/></pattern></defs><rect width=%22100%22 height=%22100%22 fill=%22url(%23grain)%22/></svg>')"></div>
-      </div>
-
-      <div class="max-w-6xl mx-auto px-6 space-y-16 relative">
-        <div class="text-center animate-fade-in space-y-12">
-          <div>
-            <h2 class="text-4xl md:text-5xl font-black text-primary mb-8 font-serif">
-              Our Story
-            </h2>
-            <p class="text-xl md:text-2xl leading-relaxed text-gray-700 max-w-4xl mx-auto font-medium">
-              Tibetan Youth Initiative began as a student-led nonprofit rooted in Tibetan community and culture. We support youth through education programs, cultural projects, and practical resources that help them succeed in school and maintain their identity.
-            </p>
-          </div>
-
-          <div class="space-y-10">
-            <blockquote class="text-xl md:text-2xl leading-relaxed text-gray-700 font-medium max-w-3xl mx-auto">
-              "We are students, volunteers, and friends working together to support our communities. Real progress happens through steady effort, thoughtful teamwork, and shared care for the people we serve."
-            </blockquote>
-
-            <div>
-              <p class="text-xl md:text-2xl leading-relaxed text-gray-700 max-w-3xl mx-auto">
-                <span class="font-bold text-primary uppercase tracking-wide">Founder & Lead Director</span>
-                <span class="ml-2">Nyida Gyal</span>
-              </p>
-            </div>
-          </div>
-        </div>
-
+      <div class="service-category">
+        <div class="service-title">Research Team</div>
+        <p>Nyida Gyal, Khadotso Gyal, Thomas Millward, Tyler Jeong</p>
       </div>
     </section>
 
-    <!-- Policy Briefs and Reports Section -->
-    <section id="briefs" class="py-24 md:py-32 bg-white/95 relative overflow-hidden">
-      <div class="absolute inset-0 opacity-5">
-        <div class="absolute top-0 left-0 w-full h-full bg-repeat" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><pattern id=%22grain%22 width=%22100%22 height=%22100%22 patternUnits=%22userSpaceOnUse%22><circle cx=%2250%22 cy=%2250%22 r=%221%22 fill=%22%23000%22/></pattern></defs><rect width=%22100%22 height=%22100%22 fill=%22url(%23grain)%22/></svg>')"></div>
+    <section id="gallery" aria-labelledby="gallery-heading">
+      <h2 id="gallery-heading">Gallery</h2>
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="image1.png" alt="Student participating in a classroom session">
+          <figcaption>Student engagement session</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="image3.jpeg" alt="Educational supplies distributed in a classroom">
+          <figcaption>Classroom supply distribution</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="image2.jpeg" alt="Volunteers preparing educational materials">
+          <figcaption>Volunteer supply preparation</figcaption>
+        </figure>
       </div>
-
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center mb-16 animate-fade-in">
-          <h2 class="text-4xl md:text-5xl font-black text-primary mb-6 font-serif">
-            Policy Briefs & Reports
-          </h2>
-          <p class="text-xl md:text-2xl max-w-4xl mx-auto text-gray-700 font-medium">
-            Real projects and reports from our team, shared with international partners and organizations that shape policy and help keep Tibetan voices heard.
-          </p>
-        </div>
-
-        <div class="space-y-8">
-          <!-- Brief 1 -->
-          <article class="grid grid-cols-1 lg:grid-cols-[220px_minmax(0,1fr)] gap-6 p-6 bg-white/95 rounded-3xl shadow-2xl border border-primary/10 card-hover overflow-hidden">
-            <div class="rounded-3xl overflow-hidden bg-white h-52 flex items-center justify-center">
-              <img src="images.png" alt="Transitional justice illustration" class="max-w-full max-h-full object-contain">
-            </div>
-            <div class="space-y-4">
-              <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
-                <div>
-                  <h3 class="text-2xl font-bold text-primary font-serif">New Technologies and Transitional Justice</h3>
-                  <p class="text-sm text-gray-500 mt-2">Submitted to the Office of the United Nations High Commissioner for Human Rights</p>
-                </div>
-                <div class="text-4xl font-black text-gray-900">2025</div>
-              </div>
-              <p class="text-gray-700 leading-relaxed">
-                This report looks at how new technology affects justice work, and why responsible use matters. It highlights the need for clear standards, honest reporting, and safeguards so tools support people without creating new harms.
-              </p>
-              <p class="text-sm text-gray-500">Authors: Nyida Gyal</p>
-              <div class="flex flex-wrap gap-3">
-                <a href="https://papers.ssrn.com/sol3/Delivery.cfm/5976274.pdf?abstractid=5976274&mirid=1" target="_blank" class="inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white font-bold py-2 px-4 rounded-full transition-all duration-300">PDF</a>
-                <a href="https://papers.ssrn.com/sol3/Delivery.cfm/5976274.pdf?abstractid=5976274&mirid=1" target="_blank" class="inline-flex items-center justify-center border border-primary text-primary font-bold py-2 px-4 rounded-full transition-all duration-300">SSRN</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Brief 2 -->
-          <article class="grid grid-cols-1 lg:grid-cols-[220px_minmax(0,1fr)] gap-6 p-6 bg-white/95 rounded-3xl shadow-2xl border border-primary/10 card-hover overflow-hidden">
-            <div class="rounded-3xl overflow-hidden bg-white h-52 flex items-center justify-center">
-              <img src="a272eaf0-3160-496d-af2c-09c54d46d118.png" alt="Youth-led education illustration" class="max-w-full max-h-full object-contain">
-            </div>
-            <div class="space-y-4">
-              <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
-                <div>
-                  <h3 class="text-2xl font-bold text-primary font-serif">Youth-Led Educational Interventions for Displaced Youth</h3>
-                  <p class="text-sm text-gray-500 mt-2">Submitted to the European Commission, Directorate-General for Employment, Social Affairs and Inclusion</p>
-                </div>
-                <div class="text-4xl font-black text-gray-900">2026</div>
-              </div>
-              <p class="text-gray-700 leading-relaxed">
-                Focused on refugee and minority children, this report argues for fair access to school supplies and community-led programs. It urges support for student voices, better tools for learning, and stronger plans to close education gaps.
-              </p>
-              <p class="text-sm text-gray-500">Authors: Nyida Gyal, Thomas Millward, Khadotso Gyal, Tyler Jeong</p>
-              <div class="flex flex-wrap gap-3">
-                <span class="inline-flex items-center justify-center bg-white border border-gray-300 text-gray-700 font-bold py-2 px-4 rounded-full">Under Review</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Brief 3 -->
-          <article class="grid grid-cols-1 lg:grid-cols-[220px_minmax(0,1fr)] gap-6 p-6 bg-white/95 rounded-3xl shadow-2xl border border-primary/10 card-hover overflow-hidden">
-            <div class="rounded-3xl overflow-hidden bg-white h-52 flex items-center justify-center">
-              <img src="b87107dc-1040-4d23-86a6-b6707f0b3b3b.png" alt="Rights and minorities illustration" class="max-w-full max-h-full object-contain">
-            </div>
-            <div class="space-y-4">
-              <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
-                <div>
-                  <h3 class="text-2xl font-bold text-primary font-serif">Rights of Persons Belonging to National or Ethnic, Religious and Linguistic Minorities</h3>
-                  <p class="text-sm text-gray-500 mt-2">Submitted to the Office of the United Nations High Commissioner for Human Rights</p>
-                </div>
-                <div class="text-4xl font-black text-gray-900">2026</div>
-              </div>
-              <p class="text-gray-700 leading-relaxed">
-                Inspired by Tibetan diaspora experiences, this report describes the daily barriers minority communities face. It calls for better access to identity documents, fair participation in public life, and support for community-led decision making.
-              </p>
-              <p class="text-sm text-gray-500">Authors: Khadotso Gyal, Thomas Millward, Nyida Gyal</p>
-              <div class="flex flex-wrap gap-3">
-                <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6464679" target="_blank" class="inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white font-bold py-2 px-4 rounded-full transition-all duration-300">SSRN</a>
-                <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6464679" target="_blank" class="inline-flex items-center justify-center border border-primary text-primary font-bold py-2 px-4 rounded-full transition-all duration-300">Abstract</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Brief 4 -->
-          <article class="grid grid-cols-1 lg:grid-cols-[220px_minmax(0,1fr)] gap-6 p-6 bg-white/95 rounded-3xl shadow-2xl border border-primary/10 card-hover overflow-hidden">
-            <div class="rounded-3xl overflow-hidden bg-white h-52 flex items-center justify-center">
-              <img src="journal.pmen.0000543.g001.PNG" alt="Mental health report illustration" class="max-w-full max-h-full object-contain" onerror="this.onerror=null; this.src='image1.png';">
-            </div>
-            <div class="space-y-4">
-              <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
-                <div>
-                  <h3 class="text-2xl font-bold text-primary font-serif">Impact of Mental Health Challenges on Young People's Human Rights</h3>
-                  <p class="text-sm text-gray-500 mt-2">Submitted to the Office of the United Nations High Commissioner for Human Rights</p>
-                </div>
-                <div class="text-4xl font-black text-gray-900">2026</div>
-              </div>
-              <p class="text-gray-700 leading-relaxed">
-                This report treats mental health as a fundamental part of young people's well-being. It describes how stress and trauma affect learning and community life, and urges better support systems, respectful services, and clear protections for youth.
-              </p>
-              <p class="text-sm text-gray-500">Authors: Khadotso Gyal, Nyida Gyal</p>
-              <div class="flex flex-wrap gap-3">
-                <span class="inline-flex items-center justify-center bg-white border border-gray-300 text-gray-700 font-bold py-2 px-4 rounded-full">Under Review</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
+      <p><a href="pages/gallery.html">View full gallery &rarr;</a></p>
     </section>
 
-    <!-- Impact Statistics Section -->
-    <section id="impact" class="py-24 md:py-32 bg-accent/95 relative overflow-hidden">
-      <div class="absolute inset-0 opacity-10">
-        <div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle at 25% 25%, rgba(139, 0, 0, 0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(218, 165, 32, 0.1) 0%, transparent 50%)"></div>
+    <section id="support" aria-labelledby="support-heading">
+      <h2 id="support-heading">Support &amp; Acknowledgments</h2>
+      <div class="misc-item">
+        <p>
+          TYI gratefully acknowledges the individuals whose contributions have sustained our programs. To support our mission, please visit our <a href="pages/donate.html">donation page</a> or contact us at <a href="mailto:tibetanyouthinitiative@gmail.com">tibetanyouthinitiative@gmail.com</a>.
+        </p>
       </div>
-
-      <div class="max-w-7xl mx-auto px-6 relative">
-        <div class="text-center mb-16 animate-fade-in">
-          <h2 class="text-4xl md:text-5xl font-black text-primary mb-6 font-serif">
-            Our Impact, By the Numbers
-          </h2>
-          <p class="text-xl md:text-2xl max-w-4xl mx-auto text-gray-700 font-medium">
-            Our community support has helped students stay in school, receive supplies, and grow with confidence. These numbers represent real people and practical support delivered where it matters most.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-          <div class="bg-white p-10 rounded-3xl shadow-2xl card-hover relative overflow-hidden group">
-            <div class="absolute top-0 right-0 w-20 h-20 bg-primary opacity-10 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500"></div>
-            <div class="relative text-center">
-              <div class="text-primary text-6xl mb-4">
-                <i class="fas fa-child-reaching"></i>
-              </div>
-              <div class="text-5xl md:text-6xl font-black text-primary mb-2">1,500+</div>
-              <div class="text-xl font-bold text-gray-600 mb-4">Students Supported</div>
-              <div class="progress-bar" style="width: 95%"></div>
-              <p class="text-sm text-gray-500 mt-2">Across 3 schools in Dharamsala</p>
-            </div>
-          </div>
-
-          <div class="bg-white p-10 rounded-3xl shadow-2xl card-hover relative overflow-hidden group">
-            <div class="absolute top-0 right-0 w-20 h-20 bg-primary opacity-10 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500"></div>
-            <div class="relative text-center">
-              <div class="text-primary text-6xl mb-4">
-                <i class="fas fa-pencil-ruler"></i>
-              </div>
-              <div class="text-5xl md:text-6xl font-black text-primary mb-2">36,000+</div>
-              <div class="text-xl font-bold text-gray-600 mb-4">Supplies Distributed</div>
-              <div class="progress-bar" style="width: 88%"></div>
-              <p class="text-sm text-gray-500 mt-2">Essential learning materials</p>
-            </div>
-          </div>
-
-          <div class="bg-white p-10 rounded-3xl shadow-2xl card-hover relative overflow-hidden group">
-            <div class="absolute top-0 right-0 w-20 h-20 bg-primary opacity-10 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500"></div>
-            <div class="relative text-center">
-              <div class="text-primary text-6xl mb-4">
-                <i class="fas fa-hand-holding-dollar"></i>
-              </div>
-              <div class="text-5xl md:text-6xl font-black text-primary mb-2">$3,000+</div>
-              <div class="text-xl font-bold text-gray-600 mb-4">Raised & Deployed</div>
-              <div class="progress-bar" style="width: 75%"></div>
-              <p class="text-sm text-gray-500 mt-2">100% to direct programs</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-3xl shadow-2xl overflow-hidden animate-slide-up">
-          <div class="bg-primary p-8">
-            <h3 class="text-2xl md:text-3xl font-bold text-white text-center font-serif">
-              Detailed Supply Distribution
-            </h3>
-            <p class="text-accent text-center mt-2">Every item makes a difference</p>
-          </div>
-
-          <div class="overflow-x-auto">
-            <table class="w-full">
-              <thead class="bg-gray-50">
-                <tr>
-                  <th class="px-8 py-4 text-left font-bold text-primary">Item</th>
-                  <th class="px-8 py-4 text-center font-bold text-primary">Total Distributed</th>
-                  <th class="px-8 py-4 text-center font-bold text-primary">Impact</th>
-                </tr>
-              </thead>
-              <tbody class="text-gray-700">
-                <tr class="hover:bg-light transition-colors duration-200">
-                  <td class="px-8 py-4 font-medium">📓 Notebooks</td>
-                  <td class="px-8 py-4 text-center text-lg font-bold text-primary">1,583</td>
-                  <td class="px-8 py-4 text-center text-sm text-gray-500">Knowledge capture</td>
-                </tr>
-                <tr class="hover:bg-light transition-colors duration-200">
-                  <td class="px-8 py-4 font-medium">📏 Rulers</td>
-                  <td class="px-8 py-4 text-center text-lg font-bold text-primary">1,583</td>
-                  <td class="px-8 py-4 text-center text-sm text-gray-500">Precision learning</td>
-                </tr>
-                <tr class="hover:bg-light transition-colors duration-200">
-                  <td class="px-8 py-4 font-medium">🖊️ Pens</td>
-                  <td class="px-8 py-4 text-center text-lg font-bold text-primary">3,166</td>
-                  <td class="px-8 py-4 text-center text-sm text-gray-500">Expression tools</td>
-                </tr>
-                <tr class="hover:bg-light transition-colors duration-200">
-                  <td class="px-8 py-4 font-medium">✍ Sharpeners</td>
-                  <td class="px-8 py-4 text-center text-lg font-bold text-primary">1,583</td>
-                  <td class="px-8 py-4 text-center text-sm text-gray-500">Maintenance</td>
-                </tr>
-                <tr class="hover:bg-light transition-colors duration-200">
-                  <td class="px-8 py-4 font-medium">👝 Erasers</td>
-                  <td class="px-8 py-4 text-center text-lg font-bold text-primary">1,583</td>
-                  <td class="px-8 py-4 text-center text-sm text-gray-500">Learning from mistakes</td>
-                </tr>
-                <tr class="hover:bg-light transition-colors duration-200">
-                  <td class="px-8 py-4 font-medium">✏️ Pencils</td>
-                  <td class="px-8 py-4 text-center text-lg font-bold text-primary">1,583</td>
-                  <td class="px-8 py-4 text-center text-sm text-gray-500">Foundation writing</td>
-                </tr>
-                <tr class="hover:bg-light transition-colors duration-200">
-                  <td class="px-8 py-4 font-medium">💼 Pencil Pouches</td>
-                  <td class="px-8 py-4 text-center text-lg font-bold text-primary">1,583</td>
-                  <td class="px-8 py-4 text-center text-sm text-gray-500">Organization</td>
-                </tr>
-                <tr class="hover:bg-light transition-colors duration-200">
-                  <td class="px-8 py-4 font-medium">🎨 Color Pencils</td>
-                  <td class="px-8 py-4 text-center text-lg font-bold text-primary">18,996<span class="text-sm text-gray-500"> (1,583 sets)</span></td>
-                  <td class="px-8 py-4 text-center text-sm text-gray-500">Creative expression</td>
-                </tr>
-                <tr class="hover:bg-light transition-colors duration-200">
-                  <td class="px-8 py-4 font-medium">🎭 Drawing Books</td>
-                  <td class="px-8 py-4 text-center text-lg font-bold text-primary">1,583</td>
-                  <td class="px-8 py-4 text-center text-sm text-gray-500">Artistic development</td>
-                </tr>
-                <tr class="hover:bg-light transition-colors duration-200">
-                  <td class="px-8 py-4 font-medium">📁 Files & Tapes</td>
-                  <td class="px-8 py-4 text-center text-lg font-bold text-primary">3,166</td>
-                  <td class="px-8 py-4 text-center text-sm text-gray-500">Work organization</td>
-                </tr>
-                <tr class="bg-primary text-white font-bold">
-                  <td class="px-8 py-6 text-lg">🎯 Grand Total Items</td>
-                  <td class="px-8 py-6 text-center text-lg">36,409</td>
-                  <td class="px-8 py-6 text-center text-sm">Empowering Education</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Schools Section -->
-    <section id="schools" class="py-24 md:py-32 bg-white/95 relative overflow-hidden">
-      <div class="absolute inset-0 opacity-5">
-        <div class="absolute top-0 left-0 w-full h-full bg-repeat" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><pattern id=%22grain%22 width=%22100%22 height=%22100%22 patternUnits=%22userSpaceOnUse%22><circle cx=%2250%22 cy=%2250%22 r=%221%22 fill=%22%23000%22/></pattern></defs><rect width=%22100%22 height=%22100%22 fill=%22url(%23grain)%22/></svg>')"></div>
-      </div>
-
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center mb-16 animate-fade-in">
-          <h2 class="text-4xl md:text-5xl font-black text-primary mb-6 font-serif">
-            Schools We Supported
-          </h2>
-          <p class="text-xl md:text-2xl max-w-4xl mx-auto text-gray-700 font-medium">
-            These are the schools where we partner directly with educators and families to deliver supplies, support programs, and preserve Tibetan language and culture.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-white p-8 rounded-3xl shadow-2xl card-hover relative overflow-hidden group">
-            <div class="absolute top-0 right-0 w-20 h-20 bg-primary opacity-10 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500"></div>
-            <div class="relative">
-              <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
-                <img src="tcv.jpg" alt="School 1" class="w-full h-full object-cover scale-hover">
-              </div>
-              <h3 class="text-2xl font-bold text-primary mb-4 font-serif">Tibetan Children's Village</h3>
-              <p class="text-gray-600">Tibetan Children’s Villages (TCV) is a nonprofit organization established in 1960 in Dharamsala to care for and educate Tibetan refugee orphans and destitute children. Over time, TCV has grown into a large network of children’s villages, residential schools, and day schools across India, serving nearly 10,000 children and youth, and remains dedicated to providing a holistic education and preserving Tibetan culture. Its mission is to ensure that every child under its care receives sound education, develops a strong cultural identity, and becomes a self-reliant member of society.</p>
-            </div>
-          </div>
-
-          <div class="bg-white p-8 rounded-3xl shadow-2xl card-hover relative overflow-hidden group">
-            <div class="absolute top-0 right-0 w-20 h-20 bg-primary opacity-10 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500"></div>
-            <div class="relative">
-              <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
-                <img src="mewoenpetoen.png" alt="School 2" class="w-full h-full object-cover scale-hover">
-              </div>
-              <h3 class="text-2xl font-bold text-primary mb-4 font-serif">Mewoen Tsuglag Petoen School</h3>
-              <p class="text-gray-600">Mewoen Tsuglag Petoen School, founded in 2005 in Dharamsala, is a model school for Tibetan children in exile that combines modern education with traditional Tibetan language and values. Managed by the Sambhota Tibetan Schools Society, it teaches in Tibetan up to class III and introduces additional languages later, focusing on preserving Tibetan culture while providing quality education.</p>
-            </div>
-          </div>
-
-          <div class="bg-white p-8 rounded-3xl shadow-2xl card-hover relative overflow-hidden group">
-            <div class="absolute top-0 right-0 w-20 h-20 bg-primary opacity-10 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500"></div>
-            <div class="relative">
-              <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
-                <img src="dhasayongling.png" alt="School 3" class="w-full h-full object-cover scale-hover">
-              </div>
-              <h3 class="text-2xl font-bold text-primary mb-4 font-serif">Yongling Creche & Kinder Garten</h3>
-              <p class="text-gray-600">Yongling Crèche & Kindergarten, established in McLeod Ganj in 1984, serves to support working parents and meet the exile Tibetan government’s educational responsibilities for Tibetan children. The kindergarten is committed to providing a nurturing environment that encourages early childhood education. Currently, the school enrolls about 75 children, and also offers hostel facilities for some students to further support their learning and care.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="py-24 md:py-32 bg-white/95 relative overflow-hidden">
-      <div class="absolute inset-0 opacity-5">
-        <div class="absolute top-0 left-0 w-full h-full bg-repeat" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><pattern id=%22grain%22 width=%22100%22 height=%22100%22 patternUnits=%22userSpaceOnUse%22><circle cx=%2250%22 cy=%2250%22 r=%221%22 fill=%22%23000%22/></pattern></defs><rect width=%22100%22 height=%22100%22 fill=%22url(%23grain)%22/></svg>')"></div>
-      </div>
-
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center mb-16 animate-fade-in">
-          <h2 class="text-4xl md:text-5xl font-black text-primary mb-6 font-serif">
-            Moments of Impact
-          </h2>
-          <p class="text-xl md:text-2xl max-w-4xl mx-auto text-gray-700 font-medium">
-            Photographs from our programs showing students, classrooms, and moments of shared learning.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          <div class="relative group overflow-hidden rounded-2xl card-hover bg-white p-4 shadow-lg">
-            <img src="image1.png" alt="Student smiling" class="w-full h-64 object-cover rounded-lg scale-hover">
-            <p class="text-gray-600 mt-4 text-center font-medium">Inspiring the youth</p>
-          </div>
-          <div class="relative group overflow-hidden rounded-2xl card-hover bg-white p-4 shadow-lg">
-            <img src="image3.jpeg" alt="Classroom activity" class="w-full h-64 object-cover rounded-lg scale-hover">
-            <p class="text-gray-600 mt-4 text-center font-medium">Classroom delivery</p>
-          </div>
-          <div class="relative group overflow-hidden rounded-2xl card-hover bg-white p-4 shadow-lg">
-            <img src="image2.jpeg" alt="Group study" class="w-full h-64 object-cover rounded-lg scale-hover">
-            <p class="text-gray-600 mt-4 text-center font-medium">Packaging supplies</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Donors Section -->
-    <section id="donors" class="py-24 md:py-32 bg-white/95 relative overflow-hidden">
-      <div class="absolute inset-0 opacity-5">
-        <div class="absolute top-0 left-0 w-full h-full bg-repeat" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><pattern id=%22grain%22 width=%22100%22 height=%22100%22 patternUnits=%22userSpaceOnUse%22><circle cx=%2250%22 cy=%2250%22 r=%221%22 fill=%22%23000%22/></pattern></defs><rect width=%22100%22 height=%22100%22 fill=%22url(%23grain)%22/></svg>')"></div>
-      </div>
-
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center mb-16 animate-fade-in">
-          <h2 class="text-4xl md:text-5xl font-black text-primary mb-6 font-serif">
-            Our Generous Donors
-          </h2>
-          <p class="text-xl md:text-2xl max-w-4xl mx-auto text-gray-700 font-medium">
-            We are grateful to the people and families who have given their time, resources, and trust to help Tibetan youth learn and thrive.
-          </p>
-        </div>
-
-        <div class="bg-white p-10 rounded-3xl shadow-2xl animate-slide-up card-hover relative overflow-hidden">
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <div class="text-center">
-              <p class="text-lg font-medium text-gray-700">Jigme</p>
-            </div>
-            <div class="text-center">
-              <p class="text-lg font-medium text-gray-700">Dechen</p>
-            </div>
-            <div class="text-center">
-              <p class="text-lg font-medium text-gray-700">Daisy Kyi</p>
-            </div>
-            <div class="text-center">
-              <p class="text-lg font-medium text-gray-700">Nima Binara</p>
-            </div>
-            <div class="text-center">
-              <p class="text-lg font-medium text-gray-700">Tsering Kyi</p>
-            </div>
-            <div class="text-center">
-              <p class="text-lg font-medium text-gray-700">Rapten Gyatso</p>
-            </div>
-            <div class="text-center">
-              <p class="text-lg font-medium text-gray-700">Tsering Dhondup</p>
-            </div>
-            <div class="text-center">
-              <p class="text-lg font-medium text-gray-700">Tsering Shakya</p>
-            </div>
-            <div class="text-center">
-              <p class="text-lg font-medium text-gray-700">Drugjam</p>
-            </div>
-            <div class="text-center">
-              <p class="text-lg font-medium text-gray-700">Chakmo Tso</p>
-            </div>
-            <div class="text-center">
-              <p class="text-lg font-medium text-gray-700">Yangbum Gyal</p>
-            </div>
-            <div class="text-center">
-              <p class="text-lg font-medium text-gray-700">Warren Smith</p>
-            </div>
-            <div class="text-center">
-              <p class="text-lg font-medium text-gray-700">Dorjee Tseten</p>
-            </div>
-            <div class="text-center">
-              <p class="text-lg font-medium text-gray-700">Pema Bhum</p>
-            </div>
-            <div class="text-center">
-              <p class="text-lg font-medium text-gray-700">Tencho Gyatso</p>
-            </div>
-            <div class="text-center">
-              <p class="text-lg font-medium text-gray-700">Piero Tozzi</p>
-            </div>
-            <div class="text-center">
-              <p class="text-lg font-medium text-gray-700">Lhundup Amdo</p>
-            </div>
-            <div class="text-center">
-              <p class="text-lg font-medium text-gray-700">Kirti Kyap</p>
-            </div>
-            <div class="text-center">
-              <p class="text-lg font-medium text-gray-700">Konchok Dondup</p>
-            </div>
-            <div class="text-center">
-              <p class="text-lg font-medium text-gray-700">Tenzin Tethong</p>
-            </div>
-            <div class="text-center">
-              <p class="text-lg font-medium text-gray-700">Tenzin Dongyal</p>
-            </div>
-            <div class="text-center">
-              <p class="text-lg font-medium text-gray-700">Lumbum Tashi</p>
-            </div>
-            <div class="text-center">
-              <p class="text-lg font-medium text-gray-700">Jigme Dorjee</p>
-            </div>
-            <div class="text-center">
-              <p class="text-lg font-medium text-gray-700">Pema Dorjee</p>
-            </div>
-            <div class="text-center">
-              <p class="text-lg font-medium text-gray-700">Thaklha Gyal</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Donate Section -->
-    <section id="donate" class="py-24 md:py-32 bg-primary text-white relative overflow-hidden">
-      <div class="absolute inset-0 opacity-20">
-        <div class="absolute top-0 left-0 w-full h-full bg-repeat" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><pattern id=%22grain%22 width=%22100%22 height=%22100%22 patternUnits=%22userSpaceOnUse%22><circle cx=%2250%22 cy=%2250%22 r=%221%22 fill=%22%23fff%22/></pattern></defs><rect width=%22100%22 height=%22100%22 fill=%22url(%23grain)%22/></svg>')"></div>
-      </div>
-
-      <div class="max-w-5xl mx-auto px-6 text-center">
-        <div class="animate-fade-in">
-          <h2 class="text-4xl md:text-5xl font-black mb-6 font-serif">
-            Support Our Mission
-          </h2>
-          <p class="text-xl md:text-2xl mb-12 max-w-4xl mx-auto font-medium">
-            Your gift helps pay for school supplies, cultural programs, and support for children who need it most. When you give, you help keep Tibetan learning and community strong.
-          </p>
-        </div>
-
-        <div class="animate-slide-up">
-          <a href="pages/donate.html" class="bg-gold text-primary font-bold py-4 px-12 rounded-full text-lg transition-all duration-300 donate-button inline-flex items-center">
-            <i class="fas fa-heart mr-2"></i>
-            <span>Make a Donation</span>
-          </a>
-        </div>
+      <div class="service-category">
+        <div class="service-title">Donors</div>
+        <ul class="donor-list">
+          <li>Jigme</li>
+          <li>Dechen</li>
+          <li>Daisy Kyi</li>
+          <li>Nima Binara</li>
+          <li>Tsering Kyi</li>
+          <li>Rapten Gyatso</li>
+          <li>Tsering Dhondup</li>
+          <li>Tsering Shakya</li>
+          <li>Drugjam</li>
+          <li>Chakmo Tso</li>
+          <li>Yangbum Gyal</li>
+          <li>Warren Smith</li>
+          <li>Dorjee Tseten</li>
+          <li>Pema Bhum</li>
+          <li>Tencho Gyatso</li>
+          <li>Piero Tozzi</li>
+          <li>Lhundup Amdo</li>
+          <li>Kirti Kyap</li>
+          <li>Konchok Dondup</li>
+          <li>Tenzin Tethong</li>
+          <li>Tenzin Dongyal</li>
+          <li>Lumbum Tashi</li>
+          <li>Jigme Dorjee</li>
+          <li>Pema Dorjee</li>
+          <li>Thaklha Gyal</li>
+        </ul>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-primary text-white py-8 relative overflow-hidden">
-    <div class="absolute inset-0 opacity-10">
-      <div class="absolute top-0 left-0 w-full h-full bg-repeat" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><pattern id=%22grain%22 width=%22100%22 height=%22100%22 patternUnits=%22userSpaceOnUse%22><circle cx=%2250%22 cy=%2250%22 r=%221%22 fill=%22%23fff%22/></pattern></defs><rect width=%22100%22 height=%22100%22 fill=%22url(%23grain)%22/></svg>')"></div>
-    </div>
-
-    <div class="max-w-7xl mx-auto px-6 relative text-center">
-      <div class="flex items-center justify-center">
-        <i class="fas fa-envelope text-accent mr-3 text-xl"></i>
-        <a href="mailto:tibetanyouthinitiative@gmail.com" class="text-white hover:text-gold transition-colors duration-300">
-          tibetanyouthinitiative@gmail.com
-        </a>
-      </div>
-    </div>
+  <footer>
+    <p>
+      &copy; 2026 Tibetan Youth Initiative.
+      <a href="mailto:tibetanyouthinitiative@gmail.com">tibetanyouthinitiative@gmail.com</a>
+      &bull; Last updated: June 2026.
+    </p>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <div id="imageModal" class="modal" role="dialog" aria-modal="true" aria-label="Publication image viewer" aria-hidden="true">
+    <button type="button" class="modal-close" aria-label="Close image">&times;</button>
+    <img class="modal-content" id="modalImage" alt="">
+  </div>
+
+  <script src="assets/js/scripts.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
