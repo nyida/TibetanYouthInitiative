@@ -174,6 +174,13 @@ function createPublicationElement(publication) {
     const links = document.createElement('div');
     links.className = 'pub-links';
 
+    if (publication.article) {
+      const fullLink = document.createElement('a');
+      fullLink.href = resolveAssetPath(publication.article);
+      fullLink.textContent = '[Full Text]';
+      links.appendChild(fullLink);
+    }
+
     if (publication.links.pdf) {
       const pdfLink = document.createElement('a');
       pdfLink.href = publication.links.pdf;
@@ -201,6 +208,14 @@ function createPublicationElement(publication) {
       links.appendChild(projectLink);
     }
 
+    content.appendChild(links);
+  } else if (publication.article) {
+    const links = document.createElement('div');
+    links.className = 'pub-links';
+    const fullLink = document.createElement('a');
+    fullLink.href = resolveAssetPath(publication.article);
+    fullLink.textContent = '[Full Text]';
+    links.appendChild(fullLink);
     content.appendChild(links);
   }
 

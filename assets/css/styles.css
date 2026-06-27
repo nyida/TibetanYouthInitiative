@@ -317,6 +317,108 @@ section {
   background-color: var(--accent-color);
 }
 
+/* Full-text articles */
+.article {
+  margin-bottom: 2rem;
+}
+
+.article-org {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 1rem;
+}
+
+.article-header h1 {
+  font-size: 1.75rem;
+  line-height: 1.35;
+  margin-bottom: 1rem;
+}
+
+.article-meta {
+  margin: 0 0 2rem;
+  padding: 1rem;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  font-size: 0.9375rem;
+}
+
+.article-meta dt {
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-top: 0.75rem;
+}
+
+.article-meta dt:first-child {
+  margin-top: 0;
+}
+
+.article-meta dd {
+  margin: 0.25rem 0 0;
+  color: var(--text-secondary);
+}
+
+.article-body section {
+  margin-bottom: 2rem;
+}
+
+.article-body h2 {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+}
+
+.article-body h3 {
+  font-size: 1.0625rem;
+  margin-top: 1.5rem;
+}
+
+.article-body ul,
+.article-body ol {
+  margin: 0.75rem 0 1rem;
+  padding-left: 1.5rem;
+}
+
+.article-body li {
+  margin-bottom: 0.5rem;
+}
+
+.article-body p {
+  margin-bottom: 1rem;
+}
+
+.references {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.references h2 {
+  font-size: 1.125rem;
+}
+
+.references ol {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.article-nav {
+  margin: 2rem 0 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.9375rem;
+}
+
+.article-figure {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  background: #fafafa;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
 .award-item {
   display: flex;
   align-items: baseline;
