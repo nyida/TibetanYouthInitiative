@@ -15,12 +15,20 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 body {
   font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
   line-height: 1.6;
-  max-width: 800px;
+  max-width: 1050px;
   margin: 0 auto;
   padding: 1.5rem;
   color: var(--text-color);
@@ -44,7 +52,7 @@ body {
   top: 1rem;
 }
 
-header {
+body > header {
   margin-bottom: 1.5rem;
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 1rem;
@@ -54,16 +62,26 @@ header {
   gap: 1.5rem;
 }
 
-.header-content {
-  flex: 1;
-}
-
 .header-image img {
   width: 130px;
   height: 130px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid var(--border-color);
+  object-fit: contain;
+  border: none;
+  border-radius: 0;
+}
+
+.header-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.social-links-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0 0 1rem;
+  order: -1;
 }
 
 h1 {
@@ -126,6 +144,13 @@ nav a:hover,
   background-color: rgba(107, 21, 21, 0.08);
 }
 
+nav a[aria-current="page"],
+.social-links-header a[aria-current="page"] {
+  color: var(--accent-color);
+  background-color: rgba(107, 21, 21, 0.12);
+  font-weight: 500;
+}
+
 nav a:focus-visible,
 .social-links-header a:focus-visible,
 a:focus-visible,
@@ -134,15 +159,65 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
-.social-links-header {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin: 1.2rem 0 0;
-}
-
 .social-links-header a i {
   margin-right: 0.4rem;
+}
+
+.pub-summary {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0.35rem 0 0.5rem;
+  line-height: 1.55;
+}
+
+.pub-topics {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  margin: 0 0 0.5rem;
+}
+
+.pub-topics strong {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.page-lede {
+  margin-bottom: 1.25rem;
+  color: var(--text-secondary);
+}
+
+.program-block {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.program-block:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.program-block h3 {
+  margin-top: 0;
+  color: var(--accent-color);
+}
+
+.program-flow {
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  background: rgba(107, 21, 21, 0.04);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+}
+
+.program-flow ol {
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.program-flow li {
+  margin-bottom: 0.5rem;
 }
 
 .publication-item,
@@ -186,20 +261,54 @@ section {
   width: 100%;
 }
 
+.page-with-sidebar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.page-primary {
+  min-width: 0;
+}
+
+.page-sidebar {
+  position: sticky;
+  top: 1.5rem;
+  padding: 1.25rem;
+  background: rgba(107, 21, 21, 0.04);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  scroll-margin-top: 1rem;
+}
+
+.page-sidebar h2 {
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+}
+
 .publication-list {
   list-style: none;
   padding: 0;
   margin: 1.5rem 0 0;
-  counter-reset: publication;
 }
 
 .publication-list .publication-item {
-  counter-increment: publication;
-  display: block;
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.35rem;
+  padding-bottom: 1.35rem;
   border-bottom: 1px solid var(--border-color);
-  gap: 0;
+}
+
+.publication-list .publication-item::before,
+.publication-list .publication-item::marker {
+  content: none;
+  display: none;
 }
 
 .publication-list .publication-item:last-child {
@@ -208,24 +317,15 @@ section {
   padding-bottom: 0;
 }
 
-.publication-list .publication-item::before {
-  content: counter(publication) ".";
-  display: block;
-  font-weight: 600;
-  color: var(--accent-color);
-  font-size: 0.9375rem;
-  margin-bottom: 0.35rem;
-}
-
 .pub-title a {
   color: var(--text-color);
   text-decoration: none;
-  border-bottom: 1px solid rgba(107, 21, 21, 0.35);
 }
 
 .pub-title a:hover {
   color: var(--accent-color);
-  border-bottom-color: var(--accent-color);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
 }
 
 .pub-actions {
@@ -301,30 +401,40 @@ section {
 }
 
 .publication-item {
-  margin-bottom: 1.5rem;
-  padding: 0.75rem 0;
-  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 0;
+  padding: 0;
+  border-bottom: none;
   display: flex;
-  gap: 1.25rem;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.85rem;
 }
 
 .pub-thumbnail {
-  width: 125px;
-  height: 125px;
+  width: 128px;
+  height: 82px;
   flex-shrink: 0;
   border: 1px solid var(--border-color);
   overflow: hidden;
-  cursor: pointer;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px var(--shadow-color);
+  border-radius: 4px;
+  box-shadow: 0 1px 4px var(--shadow-color);
   padding: 0;
   background: #fff;
+  display: block;
+  text-decoration: none;
+  order: -1;
 }
 
 .pub-thumbnail img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.pub-thumbnail:hover {
+  border-color: var(--accent-color);
 }
 
 .pub-content {
@@ -334,8 +444,9 @@ section {
 
 .pub-title {
   font-weight: 500;
-  margin-bottom: 0.4rem;
-  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 .pub-authors {
@@ -403,41 +514,58 @@ section {
   margin-bottom: 2rem;
 }
 
+.article-header {
+  display: block;
+  width: 100%;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
 .article-org {
+  display: block;
+  width: 100%;
   font-size: 0.8125rem;
   color: var(--text-secondary);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-bottom: 1rem;
+  margin: 0 0 0.85rem;
 }
 
 .article-header h1 {
-  font-size: 1.75rem;
-  line-height: 1.35;
-  margin-bottom: 1rem;
+  display: block;
+  width: 100%;
+  font-size: 1.45rem;
+  line-height: 1.45;
+  font-weight: 500;
+  margin: 0 0 1.25rem;
 }
 
 .article-meta {
-  margin: 0 0 2rem;
-  padding: 1rem;
-  background: var(--bg-color);
-  border: 1px solid var(--border-color);
-  font-size: 0.9375rem;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.article-meta dt {
+.article-meta .meta-label {
+  display: block;
+  width: 100%;
   font-weight: 600;
   color: var(--accent-color);
-  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  margin: 1rem 0 0.35rem;
 }
 
-.article-meta dt:first-child {
+.article-meta .meta-label:first-child {
   margin-top: 0;
 }
 
-.article-meta dd {
-  margin: 0.25rem 0 0;
+.article-meta .meta-value {
+  display: block;
+  width: 100%;
+  margin: 0 0 0.25rem;
   color: var(--text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.55;
 }
 
 .article-body section {
@@ -497,7 +625,20 @@ section {
   background: #fafafa;
   font-size: 0.875rem;
   color: var(--text-secondary);
+}
+
+.article-figure img {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  margin: 0 auto 0.75rem;
+  border-radius: 4px;
+}
+
+.article-figure figcaption {
   font-style: italic;
+  text-align: center;
 }
 
 .award-item {
@@ -517,9 +658,15 @@ section {
 }
 
 .news-container {
-  max-height: 300px;
-  overflow-y: auto;
-  scrollbar-width: thin;
+  max-height: none;
+  overflow: visible;
+}
+
+.page-sidebar .news-list li {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.6rem;
 }
 
 .news-list {
@@ -713,8 +860,23 @@ th.num {
   font-style: italic;
 }
 
+@media (max-width: 900px) {
+  .page-with-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .page-sidebar {
+    position: static;
+    margin-top: 0;
+  }
+
+  .news-container {
+    max-height: none;
+  }
+}
+
 @media (max-width: 768px) {
-  header {
+  body > header {
     flex-direction: column-reverse;
     align-items: center;
     text-align: center;
@@ -726,12 +888,14 @@ th.num {
   }
 
   .publication-item {
-    flex-direction: column;
+    flex-direction: row;
+    align-items: flex-start;
   }
 
   .pub-thumbnail {
-    width: 100%;
-    max-width: 200px;
+    width: 112px;
+    height: 72px;
+    max-width: none;
   }
 
   .publication-item:hover,

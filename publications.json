@@ -1,80 +1,80 @@
 {
-  "publications": [
-    {
-      "title": "Youth-Led Educational Interventions, Material Security and Digital Governance for Displaced Youth",
-      "authors": ["Nyida Gyal", "Thomas Millward", "Khadotso Gyal", "Tyler Jeong"],
-      "venue": "European Commission, DG Employment, Social Affairs and Inclusion — Call for Evidence: Strengthening of the European Child Guarantee [Ares(2026)2684187], 2026",
-      "thumbnail": "a272eaf0-3160-496d-af2c-09c54d46d118.png",
-      "selected": 1,
-      "award": "Submitted",
-      "article": "articles/youth-led-educational-interventions.html",
-      "links": {}
-    },
-    {
-      "title": "The Impact of Mental Health Challenges on the Enjoyment of Human Rights by Young People",
-      "authors": ["Khadotso Gyal", "Nyida Gyal"],
-      "venue": "UN Office of the High Commissioner for Human Rights — Input on Youth Mental Health and Human Rights, 2026",
-      "thumbnail": "journal.pmen.0000543.g001.PNG",
-      "selected": 1,
-      "award": "Submitted",
-      "article": "articles/mental-health-youth-human-rights.html",
-      "links": {}
-    },
-    {
-      "title": "New Technologies and Transitional Justice",
-      "authors": ["Nyida Gyal"],
-      "venue": "UN Office of the High Commissioner for Human Rights — Input on New Technologies and Transitional Justice, 2025",
-      "thumbnail": "images.png",
-      "selected": 1,
-      "award": "Published",
-      "article": "articles/new-technologies-transitional-justice.html",
-      "links": {
-        "pdf": "https://papers.ssrn.com/sol3/Delivery.cfm/5976274.pdf?abstractid=5976274&mirid=1",
-        "project": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5976274"
-      }
-    },
-    {
-      "title": "Rights of Persons Belonging to National or Ethnic, Religious and Linguistic Minorities",
-      "authors": ["Khadotso Gyal", "Thomas Millward", "Nyida Gyal"],
-      "venue": "UN OHCHR — Call for Inputs: 2026 Report of the Secretary-General on Minority Rights, 2026",
-      "thumbnail": "b87107dc-1040-4d23-86a6-b6707f0b3b3b.png",
-      "selected": 1,
-      "award": "Published",
-      "article": "articles/minority-rights-diaspora.html",
-      "links": {
-        "pdf": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6464679",
-        "project": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6464679"
-      }
-    },
-    {
-      "title": "Mitigating Peripheral Supply Chain Dependencies in Frontier AI",
-      "authors": ["Nyida Gyal", "Khadotso Gyal"],
-      "venue": "OpenAI Global Affairs & Procurement — RFP: Strengthening the US AI Supply Chain Through Domestic Manufacturing, 2026",
-      "thumbnail": "a272eaf0-3160-496d-af2c-09c54d46d118.png",
-      "selected": 0,
-      "award": "Submitted",
-      "article": "articles/ai-supply-chain-openai.html",
-      "links": {}
-    },
-    {
-      "title": "Algorithmic Safety and Cognitive Vulnerabilities in Generative AI",
-      "authors": ["Nyida Gyal", "Thomas Millward"],
-      "venue": "Digital Regulation Cooperation Forum (DRCF) — Call for Input: Consumer Interest, Algorithmic Safety, and Generative AI Interfaces, 2026",
-      "thumbnail": "images.png",
-      "selected": 0,
-      "award": "Submitted",
-      "article": "articles/algorithmic-safety-drcf.html",
-      "links": {}
-    },
-    {
-      "title": "Algorithmic Safety and Cognitive Vulnerabilities in Generative AI",
-      "authors": ["Nyida Gyal", "Thomas Millward"],
-      "venue": "Anthropic Public Policy & Global Affairs — Strategic Response: Mitigating Algorithmic Risks and Linguistic Friction in Frontier Models, 2026",
-      "thumbnail": "images.png",
-      "selected": 0,
-      "award": "Submitted",
-      "article": "articles/algorithmic-safety-anthropic.html",
-      "links": {}
-    }
-  ]
+ "publications": [
+ {
+ "title": "Youth-Led Educational Interventions, Material Security and Digital Governance for Displaced Youth",
+ "authors": ["Nyida Gyal", "Thomas MiIIward", "Khadotso Gyal", "TyIer Jeong"],
+ "venue": "European Commission, DG Employment, Social Affairs and Inclusion, Call for Evidence: Strengthening of the European Child Guarantee [Ares(2026)2684187], 2026",
+ "thumbnail": "youth-led-educational-interventions.png",
+ "selected": 1,
+ "award": "Submitted",
+ "article": "articles/youth-led-educational-interventions.html",
+ "links": {}
+ },
+ {
+ "title": "The Impact of Mental Health Challenges on the Enjoyment of Human Rights by Young People",
+ "authors": ["Khadotso Gyal", "Nyida Gyal"],
+ "venue": "UN Office of the High Commissioner for Human Rights, Input on Youth Mental Health and Human Rights, 2026",
+ "thumbnail": "mental-health-youth-human-rights.png",
+ "selected": 1,
+ "award": "Submitted",
+ "article": "articles/mental-health-youth-human-rights.html",
+ "links": {}
+ },
+ {
+ "title": "New Technologies and Transitional Justice",
+ "authors": ["Nyida Gyal"],
+ "venue": "UN Office of the High Commissioner for Human Rights, Input on New Technologies and Transitional Justice, 2025",
+ "thumbnail": "new-technologies-transitional-justice.png",
+ "selected": 1,
+ "award": "Published",
+ "article": "articles/new-technologies-transitional-justice.html",
+ "links": {
+ "pdf": "https://papers.ssrn.com/sol3/Delivery.cfm/5976274.pdf?abstractid=5976274&mirid=1",
+ "project": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5976274"
+ }
+ },
+ {
+ "title": "Rights of Persons Belonging to National or Ethnic, Religious and Linguistic Minorities",
+ "authors": ["Khadotso Gyal", "Thomas MiIIward", "Nyida Gyal"],
+ "venue": "UN OHCHR, Call for Inputs: 2026 Report of the Secretary-General on Minority Rights, 2026",
+ "thumbnail": "minority-rights-diaspora.png",
+ "selected": 1,
+ "award": "Published",
+ "article": "articles/minority-rights-diaspora.html",
+ "links": {
+ "pdf": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6464679",
+ "project": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6464679"
+ }
+ },
+ {
+ "title": "Mitigating Peripheral Supply Chain Dependencies in Frontier AI",
+ "authors": ["Nyida Gyal", "Khadotso Gyal"],
+ "venue": "OpenAI Global Affairs & Procurement, RFP: Strengthening the US AI Supply Chain Through Domestic Manufacturing, 2026",
+ "thumbnail": "ai-supply-chain-openai.png",
+ "selected": 0,
+ "award": "Submitted",
+ "article": "articles/ai-supply-chain-openai.html",
+ "links": {}
+ },
+ {
+ "title": "Algorithmic Safety and Cognitive Vulnerabilities in Generative AI",
+ "authors": ["Nyida Gyal", "Thomas MiIIward"],
+ "venue": "Digital Regulation Cooperation Forum (DRCF), Call for Input: Consumer Interest, Algorithmic Safety, and Generative AI Interfaces, 2026",
+ "thumbnail": "algorithmic-safety-drcf.png",
+ "selected": 0,
+ "award": "Submitted",
+ "article": "articles/algorithmic-safety-drcf.html",
+ "links": {}
+ },
+ {
+ "title": "Algorithmic Safety and Cognitive Vulnerabilities in Generative AI",
+ "authors": ["Nyida Gyal", "Thomas MiIIward"],
+ "venue": "Anthropic Public Policy & Global Affairs, Strategic Response: Mitigating Algorithmic Risks and Linguistic Friction in Frontier Models, 2026",
+ "thumbnail": "algorithmic-safety-anthropic.png",
+ "selected": 0,
+ "award": "Submitted",
+ "article": "articles/algorithmic-safety-anthropic.html",
+ "links": {}
+ }
+ ]
 }

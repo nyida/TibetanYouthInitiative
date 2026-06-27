@@ -1,8 +1,8 @@
 const TYI_AUTHORS = [
   'Nyida Gyal',
   'Khadotso Gyal',
-  'Thomas Millward',
-  'Tyler Jeong'
+  'Thomas MiIIward',
+  'TyIer Jeong'
 ];
 
 let allPublications = [];
